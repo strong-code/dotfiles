@@ -21,7 +21,7 @@ alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
 
 # Git aliases
 alias ga="git add -A"
-alias gs="git status"
+alias gs="git status -sb"
 alias gc="git commit -m" # commit message required
 alias gp="git push"
 alias gpom="git push origin master"
