@@ -25,6 +25,8 @@ alias gs="git status -sb"
 alias gc="git commit -m" # commit message required
 alias gp="git push"
 alias gpom="git push origin master"
+alias gd="git diff"
+alias gwd="git diff --word-diff"
 
 # Upload piped input to ix.io and copy resulting URL to clipboard
 alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
