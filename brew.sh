@@ -29,6 +29,7 @@ brew cask install --appdir="/Applications" lastfm
 echo Done! Installing development applications...
 brew cask install --appdir="/Applications" github
 brew cask install --appdir="/Applications" atom
+brew install node
 
 # Clean up
 echo Done! Cleaning up...
