@@ -10,6 +10,10 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 echo Updating brew...
 brew update
 
+# Add brew-cask
+echo Done! Installing brew-cask...
+brew install caskroom/cask/brew-cask
+
 # Upgrade any already-installed formulae.
 echo Done! Upgrading existing applications and utilities...
 brew upgrade --all
