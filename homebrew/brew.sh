@@ -21,6 +21,7 @@ brew upgrade --all
 # Install basic utilities
 echo Done! Installing basic utilities...
 brew install postgresql
+brew install node
 
 # Install basic apps
 echo Done! Installing applications...
@@ -33,7 +34,7 @@ brew cask install --appdir="/Applications" lastfm
 echo Done! Installing development applications...
 brew cask install --appdir="/Applications" github
 brew cask install --appdir="/Applications" atom
-brew install node
+brew cask install --appdir="/Applications" macdown
 
 # Clean up
 echo Done! Cleaning up...
