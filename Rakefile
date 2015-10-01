@@ -30,7 +30,7 @@ private
 
 def install_fonts
   puts "Installing San Francisco font..."
-  `ruby -e ""$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)"`
+  `ruby -e "$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)"`
   puts "Done!"
 end
 
