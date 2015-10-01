@@ -1,9 +1,6 @@
 #!/bin/sh
 
-echo Installing San Francisco system font...
-ruby -e "$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)"
-
-echo Done! Installing Homebrew...
+echo Installing Homebrew...
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Make sure we’re using the latest Homebrew.
@@ -19,9 +16,8 @@ echo Done! Upgrading existing applications and utilities...
 brew upgrade --all
 
 # Install basic utilities
-echo Done! Installing basic utilities...
-brew install postgresql
-brew install node
+echo Done! Installing irssi IRC client...
+brew install irssi
 
 # Install basic apps
 echo Done! Installing applications...
@@ -35,6 +31,8 @@ echo Done! Installing development applications...
 brew cask install --appdir="/Applications" github
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" macdown
+brew install postgresql
+brew install node
 
 # Clean up
 echo Done! Cleaning up...
