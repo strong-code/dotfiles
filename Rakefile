@@ -1,5 +1,6 @@
 require 'rake'
 require 'envyable'
+require 'open3'
 
 # Load env variables from our install profile
 Envyable.load('./env.yml', 'install')
@@ -30,14 +31,14 @@ private
 
 def install_fonts
   puts "Installing San Francisco font..."
-  `ruby -e "$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)"`
+  shell_out("ruby -e \"$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)\"")
   puts "Done!"
 end
 
 def install_ruby
   puts "Installing RVM..."
   # Run RVM setup
-  `bash ./ruby/setup.sh`
+  shell_out("bash ./ruby/setup.sh")
   # Symlink .gemrc file
   `ln -s ./ruby/.gemrc ~/.gemrc`
   puts "Done!"
@@ -46,7 +47,7 @@ end
 def install_homebrew
   puts "Running brew.sh for Homebrew install and app setup..."
   # Run homebrew bash script
-  `bash ./homebrew/brew.sh`
+  shell_out("bash ./homebrew/brew.sh")
   puts "Done!"
 end
 
@@ -79,6 +80,20 @@ def install_irssi
   # Irssi MUST be installed first (through brew.sh)
   `ln -s ./irssi/config ~/.irssi/config`
   puts "Done!"
+end
+
+# Shell out to interactive prompt for shell installations
+def shell_out(command)
+  puts "Entering bash prompt..."
+  i, o, c = Open3.popen("#{command}")
+  Thread.new {
+    while c = gets
+      i.puts
+    end
+    i.close
+  }
+  puts c while c = o.gets
+  puts "Finished. Back to Rakefile!"
 end
 
 def should_install?(section_name)
