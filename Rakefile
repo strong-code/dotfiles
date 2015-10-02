@@ -46,6 +46,8 @@ end
 
 def install_homebrew
   puts "Running brew.sh for Homebrew install and app setup..."
+  # Install homebrew
+  shell_out("ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"")
   # Run homebrew bash script
   shell_out("bash ./homebrew/brew.sh")
   puts "Done!"
