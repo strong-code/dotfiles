@@ -85,7 +85,7 @@ end
 # Shell out to interactive prompt for shell installations
 def shell_out(command)
   puts "Entering bash prompt..."
-  i, o, c = Open3.popen("#{command}")
+  i, o, c = Open3.popen2("#{command}")
   Thread.new {
     while c = gets
       i.puts
