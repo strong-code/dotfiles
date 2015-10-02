@@ -1,9 +1,5 @@
 require 'rake'
-require 'envyable'
 require 'open3'
-
-# Load env variables from our install profile
-Envyable.load('./env.yml', 'install')
 
 task :install do
   puts
@@ -106,7 +102,7 @@ def shell_out(command)
 end
 
 def should_install?(section_name)
-  if ENV['VERBOSE'] == 'true'
+  if ['-v', '-verbose'].include?(ARGV[0])
     puts "Run install script for: #{section_name}? [y]es, [n]o"
     STDIN.gets.chomp == 'y'
   else
