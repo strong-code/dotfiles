@@ -15,6 +15,7 @@ task :install do
   begin
     install_fonts if should_install?("San Francisco font")
     install_ruby if should_install?("ruby and rvm configuration")
+    install_bash if should_install?("bash profile")
     install_homebrew if should_install?("Homebrew & default apps")
     install_osx if should_install?("OSX system settings")
     install_git if should_install?("git configuration")
@@ -43,6 +44,11 @@ def install_ruby
   `ln -s ./ruby/.gemrc ~/.gemrc`
   puts "Done!"
 end
+
+def install_bash
+  puts "Symlinking .bash_profile..."
+  `ln -s ./.bash_profile ~/.bash_profile`
+  puts "Done!"
 
 def install_homebrew
   puts "Running brew.sh for Homebrew install and app setup..."
