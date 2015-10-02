@@ -49,6 +49,7 @@ def install_bash
   puts "Symlinking .bash_profile..."
   `ln -s ./.bash_profile ~/.bash_profile`
   puts "Done!"
+end
 
 def install_homebrew
   puts "Running brew.sh for Homebrew install and app setup..."
