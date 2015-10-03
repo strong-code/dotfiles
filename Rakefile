@@ -42,8 +42,10 @@ def install_ruby
 end
 
 def install_bash
-  puts "Symlinking .bash_profile..."
-  `ln -s ./.bash_profile ~/.bash_profile`
+  puts "Backing up contents of ~/.bash_profile..."
+  `mv ~/.bash_profile ~/.bash_profile_backup`
+  puts "Done! Symlinking .bash_profile..."
+  `ln -s .bash_profile ~/.bash_profile`
   puts "Done!"
 end
 
@@ -59,16 +61,16 @@ end
 def install_osx
   puts "Symlinking .osx configuration..."
   # Symlink .osx file
-  `ln -s ./osx/.osx ~/.osx`
+  `ln -s osx/.osx ~/.osx`
   puts "Done!"
 end
 
 def install_git
   puts "Symlinking git configuration"
   # Symlink .gitconfig for user-specific settings
-  `ln -s ./git/.gitconfig ~/.gitconfig`
+  `ln -s git/.gitconfig ~/.gitconfig`
   # Symlink global .gitignore
-  `ln -s ./git/.gitignore ~/.gitignore`
+  `ln -s git/.gitignore ~/.gitignore`
   `git config --global core.excludesfile ~/.gitignore`
   puts "Done!"
 end
@@ -76,14 +78,16 @@ end
 def install_ssh
   puts "Symlinking ssh configuration..."
   # Symlink ssh .config
-  `ln -s ./ssh/.config ~/.ssh/config`
+  `mkdir ~/.ssh`
+  `ln -s ssh/.config ~/.ssh/config`
   puts "Done!"
 end
 
 def install_irssi
   puts "Symlinking irssi configuration..."
   # Irssi MUST be installed first (through brew.sh)
-  `ln -s ./irssi/config ~/.irssi/config`
+  `mkdir ~/.irssi`
+  `ln -s irssi/config ~/.irssi/config`
   puts "Done!"
 end
 
