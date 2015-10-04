@@ -115,7 +115,7 @@ statusbar = {
     window = "{sb }";
     window_empty = "{sb }";
     prompt = "$N >> ";
-    prompt_empty = ">> ";
+    prompt_empty = "⤳ ";
     topic = " $topic";
     topic_empty = "";
 
