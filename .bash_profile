@@ -34,6 +34,4 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 # Easy alias for re-attaching to screen sessions (mainly for when im ssh'd into my server)
 alias srd="screen -rd"
 
-source ~/.profile
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
