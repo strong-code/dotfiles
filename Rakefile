@@ -37,7 +37,8 @@ def install_ruby
   # Run RVM setup
   shell_out("bash ./ruby/setup.sh")
   # Symlink .gemrc file
-  `ln -s ./ruby/.gemrc ~/.gemrc`
+  path = File.expand_path("~/.gemrc")
+  `ln -s ./ruby/.gemrc #{path}`
   puts "Done!"
 end
 
@@ -45,7 +46,8 @@ def install_bash
   puts "Backing up contents of ~/.bash_profile..."
   `mv ~/.bash_profile ~/.bash_profile_backup`
   puts "Done! Symlinking .bash_profile..."
-  `ln -s .bash_profile ~/.bash_profile`
+  path = File.expand_path("~/.bash_profile")
+  `ln -s .bash_profile #{path}`
   puts "Done!"
 end
 
@@ -61,16 +63,19 @@ end
 def install_osx
   puts "Symlinking .osx configuration..."
   # Symlink .osx file
-  `ln -s osx/.osx ~/.osx`
+  path = File.expand_path("~/.osx")
+  `ln -s osx/.osx #{path}`
   puts "Done!"
 end
 
 def install_git
   puts "Symlinking git configuration"
   # Symlink .gitconfig for user-specific settings
-  `ln -s git/.gitconfig ~/.gitconfig`
+  path = File.expand_path("~/.gitconfig")
+  `ln -s git/.gitconfig #{path}`
   # Symlink global .gitignore
-  `ln -s git/.gitignore ~/.gitignore`
+  path = File.expand_path("~/.gitignore")
+  `ln -s git/.gitignore #{path}`
   `git config --global core.excludesfile ~/.gitignore`
   puts "Done!"
 end
@@ -78,16 +83,18 @@ end
 def install_ssh
   puts "Symlinking ssh configuration..."
   # Symlink ssh .config
+  path = File.expand_path("~/.ssh/config")
   `mkdir ~/.ssh`
-  `ln -s ssh/.config ~/.ssh/config`
+  `ln -s ssh/.config #{path}`
   puts "Done!"
 end
 
 def install_irssi
   puts "Symlinking irssi configuration..."
   # Irssi MUST be installed first (through brew.sh)
+  path = File.expand_path("~/.irssi/config")
   `mkdir ~/.irssi`
-  `ln -s irssi/config ~/.irssi/config`
+  `ln -s irssi/config #{path}`
   puts "Done!"
 end
 
