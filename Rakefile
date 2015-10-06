@@ -21,7 +21,7 @@ task :install do
 
   begin
     modules
-      .select { |k,_| should_install?(k) }
+      .select! { |k,_| should_install?(k) }
       .each { |k,v| puts "Installing module: #{k}"; v.call }
 
     success_message
@@ -43,18 +43,15 @@ def install_ruby
   puts "Installing RVM..."
   # Run RVM setup
   shell_out("bash ./ruby/setup.sh")
-  # Symlink .gemrc file
-  path = File.expand_path("~/.gemrc")
-  `ln -s ./ruby/.gemrc #{path}`
+
+  symlink("ruby/.gemrc", "~/.gemrc")
   puts "Done!"
 end
 
 def install_bash
   puts "Backing up contents of ~/.bash_profile..."
   `mv ~/.bash_profile ~/.bash_profile_backup`
-  puts "Done! Symlinking .bash_profile..."
-  path = File.expand_path("~/.bash_profile")
-  `ln -s .bash_profile #{path}`
+  symlink(".bash_profile", "~/.bash_profile")
   puts "Done!"
 end
 
@@ -68,40 +65,27 @@ def install_homebrew
 end
 
 def install_osx
-  puts "Symlinking .osx configuration..."
-  # Symlink .osx file
-  path = File.expand_path("~/.osx")
-  `ln -s osx/.osx #{path}`
+  symlink("osx/.osx", "~/.osx")
   puts "Done!"
 end
 
 def install_git
-  puts "Symlinking git configuration"
-  # Symlink .gitconfig for user-specific settings
-  path = File.expand_path("~/.gitconfig")
-  `ln -s git/.gitconfig #{path}`
-  # Symlink global .gitignore
-  path = File.expand_path("~/.gitignore")
-  `ln -s git/.gitignore #{path}`
+  symlink("git/.gitconfig", "~/.gitconfig")
+  symlink("git/.gitignore", "~/.gitignore")
   `git config --global core.excludesfile ~/.gitignore`
   puts "Done!"
 end
 
 def install_ssh
-  puts "Symlinking ssh configuration..."
-  # Symlink ssh .config
-  path = File.expand_path("~/.ssh/config")
-  `mkdir ~/.ssh`
-  `ln -s ssh/.config #{path}`
+  `mkdir ~/.ssh` if !Dir.exist?(File.expand_path("~/.ssh"))
+  symlink("ssh/.config", "~/.ssh/config")
   puts "Done!"
 end
 
 def install_irssi
-  puts "Symlinking irssi configuration..."
   # Irssi MUST be installed first (through brew.sh)
-  path = File.expand_path("~/.irssi/config")
-  `mkdir ~/.irssi`
-  `ln -s irssi/config #{path}`
+  `mkdir ~/.irssi` if !Dir.exist?(File.expand_path("~/.irssi"))
+  symlink("irssi/config", "~/.irssi/config")
   puts "Done!"
 end
 
@@ -120,6 +104,7 @@ def shell_out(command)
 end
 
 def symlink(source, target)
+  target = File.expand_path(target)
   puts "Linking #{target}"
   shell_out("ln -s \"$PWD/#{source}\" \"#{target}\"")
 end
