@@ -8,15 +8,22 @@ task :install do
   puts "======================================================"
   puts
 
+  modules = {
+    "System fonts" => Proc.new { install_fonts },
+    "Ruby and RVM" => Proc.new { install_ruby },
+    "Bash config" => Proc.new { install_bash },
+    "Homebrew config" => Proc.new { install_homebrew },
+    "OSX sytem config" => Proc.new { install_osx },
+    "Git config" => Proc.new { install_git },
+    "SSH config" => Proc.new { install_ssh },
+    "Irssi config" => Proc.new { install_irssi }
+  }
+
   begin
-    install_fonts if should_install?("San Francisco font")
-    install_ruby if should_install?("ruby and rvm configuration")
-    install_bash if should_install?("bash profile")
-    install_homebrew if should_install?("Homebrew & default apps")
-    install_osx if should_install?("OSX system settings")
-    install_git if should_install?("git configuration")
-    install_ssh if should_install?("ssh configuration")
-    install_irssi if should_install?("irssi config")
+    modules
+      .select { |k,_| should_install?(k) }
+      .each { |k,v| puts "Installing module: #{k}"; v.call }
+
     success_message
   rescue => e
     puts "Something went wrong with installing!"
@@ -112,13 +119,14 @@ def shell_out(command)
   puts "Finished. Back to Rakefile!"
 end
 
+def symlink(source, target)
+  puts "Linking #{target}"
+  shell_out("ln -s \"$PWD/#{source}\" \"#{target}\"")
+end
+
 def should_install?(section_name)
-  if ['-v', '-verbose'].include?(ARGV[0])
-    puts "Run install script for: #{section_name}? [y]es, [n]o"
-    STDIN.gets.chomp == 'y'
-  else
-    true
-  end
+  puts "Install #{section_name}? [y] or [n]"
+  STDIN.gets.chomp == 'y'
 end
 
 def success_message
