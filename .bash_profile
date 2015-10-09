@@ -18,6 +18,7 @@ alias .2="cd ../../" # Go up 2 levels
 alias .3="cd ../../../" # Go up 3 levels
 alias ~="cd ~" # Go home, where you belong
 alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
+alias desk="cd ~/Desktop" # Shortcut to desktop
 
 # Git aliases
 alias ga="git add -A"
@@ -29,6 +30,7 @@ alias gd="git diff"
 alias gwd="git diff --word-diff"
 
 # Upload piped input to ix.io and copy resulting URL to clipboard
+# ex: `cat my_image.png | pbcopy`
 alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Easy alias for re-attaching to screen sessions (mainly for when im ssh'd into my server)
