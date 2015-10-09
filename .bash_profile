@@ -20,6 +20,13 @@ alias ~="cd ~" # Go home, where you belong
 alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
 alias desk="cd ~/Desktop" # Shortcut to desktop
 
+# Helper functions
+
+function mkcd {
+  # Make a directory and cd to it
+  mkdir -p "$1" && cd "$1"
+}
+
 # Git aliases
 alias ga="git add -A"
 alias gs="git status -sb"
