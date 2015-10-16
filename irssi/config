@@ -114,7 +114,7 @@ statusbar = {
     # window_empty is printed with empty windows
     window = "{sb }";
     window_empty = "{sb }";
-    prompt = "$N >> ";
+    prompt = "$N ⤳ ";
     prompt_empty = "⤳ ";
     topic = " $topic";
     topic_empty = "";
