@@ -109,7 +109,7 @@ statusbar = {
 
     # treated "normally", you could change the time/user name to whatever
     time = "";
-    user = "$tag ~ $itemname";
+    user = "[%9$tag%9] $itemname";
 
     # treated specially .. window is printed with non-empty windows,
     # window_empty is printed with empty windows
