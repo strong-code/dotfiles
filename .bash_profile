@@ -11,6 +11,9 @@ export PS1="\u @ $C_LIGHTBLUE\w$C_DEFAULT$C_BOLD ⤳ $C_DEFAULT "
 # Export ~/.profile for RVM assistance
 source ~/.profile
 
+# Log in to server and start irssi in one command
+alias irc="ssh -t chl 'screen -d -r irc; bash -l'"
+
 # Some handy aliases for common bash tasks
 alias ls="ls -FGlAhp" # Better ls display
 alias c="clear" # Simpler than ctrl+l / clear
