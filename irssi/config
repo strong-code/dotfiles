@@ -38,7 +38,8 @@ chatnets = {
 channels = (
   { name = "#lifting"; chatnet = "Rizon"; autojoin = "Yes"; },
   { name = "merc-devel"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#python"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -114,8 +115,8 @@ statusbar = {
     # window_empty is printed with empty windows
     window = "{sb }";
     window_empty = "{sb }";
-    prompt = "$N ⤳ ";
-    prompt_empty = "⤳ ";
+    prompt = "$N ⤳  ";
+    prompt_empty = "⤳  ";
     topic = " $topic";
     topic_empty = "";
 
