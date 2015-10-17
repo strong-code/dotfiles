@@ -23,10 +23,8 @@ alias ~="cd ~" # Go home, where you belong
 alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
 alias desk="cd ~/Desktop" # Shortcut to desktop
 
-# Helper functions
-
+# Make a directory and cd to it
 function mkcd {
-  # Make a directory and cd to it
   mkdir -p "$1" && cd "$1"
 }
 

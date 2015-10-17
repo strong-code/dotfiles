@@ -84,7 +84,6 @@ end
 
 def install_irssi
   # Irssi MUST be installed first (through brew.sh)
-  `mkdir ~/.irssi` if !Dir.exist?(File.expand_path("~/.irssi"))
   symlink("irssi/config", "~/.irssi/config")
   puts "Done!"
 end
@@ -105,7 +104,7 @@ end
 
 def symlink(source, target)
   target = File.expand_path(target)
-  puts "Linking #{target}"
+  puts "Linking #{target} from #{source}"
   shell_out("ln -s \"$PWD/#{source}\" \"#{target}\"")
 end
 
