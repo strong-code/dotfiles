@@ -37,6 +37,9 @@ alias gpom="git push origin master"
 alias gd="git diff"
 alias gwd="git diff --word-diff"
 
+# Ruby related aliases
+alias ri="rake install"
+
 # Upload piped input to ix.io and copy resulting URL to clipboard
 # ex: `cat my_image.png | pbcopy`
 alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
