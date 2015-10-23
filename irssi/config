@@ -218,9 +218,10 @@ settings = {
   };
   "fe-common/core" = {
   autolog = "yes";
-  completion_char = " ";
+  completion_char = "";
   completion_strict = "no";
   autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
+  autolog_ignore_targets = "NickServ ChanServ HostServ"
   };
 };
 logs = { };
