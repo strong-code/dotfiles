@@ -11,9 +11,6 @@ export PS1="\u @ $C_LIGHTBLUE\w$C_DEFAULT$C_BOLD ⤳ $C_DEFAULT "
 # Export ~/.profile for RVM assistance
 source ~/.profile
 
-# Log in to server and start irssi in one command
-alias irc="ssh -t chl 'screen -d -r irc; bash -l'"
-
 # Some handy aliases for common bash tasks
 alias ls="ls -FGlAhp" # Better ls display
 alias c="clear" # Simpler than ctrl+l / clear
@@ -46,5 +43,11 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Easy alias for re-attaching to screen sessions (mainly for when im ssh'd into my server)
 alias srd="screen -rd"
+
+# Log in to server and start irssi in one command
+alias irc="ssh -t chl 'screen -d -r irc; bash -l'"
+
+# Second irssi login for :^) reasons
+alias sicp="ssh -t chl 'screen -d -r sicp; bash-l'"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
