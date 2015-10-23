@@ -90,6 +90,7 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  WHY = "msg ChanServ CHECKBAN $0-"
 };
 
 statusbar = {
