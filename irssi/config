@@ -224,8 +224,6 @@ settings = {
 logs = { };
 ignores = (
   { mask = "list"; level = "ALL"; },
-  { mask = "chchyjesus"; level = "ALL"; },
   { mask = "PokeBot[HP]"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#ruby" ); },
-  { level = "JOINS PARTS QUITS"; channels = ( "#rubyonrails" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#ruby", #rubyonrails, #python ); },
 );
