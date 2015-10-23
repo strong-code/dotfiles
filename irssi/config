@@ -216,9 +216,10 @@ settings = {
     scrollback_lines = "750";
   };
   "fe-common/core" = {
-    autolog = "no";
-    completion_char = " ";
-    completion_strict = "no";
+  autolog = "yes";
+  completion_char = " ";
+  completion_strict = "no";
+  autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
   };
 };
 logs = { };
