@@ -208,5 +208,6 @@ settings = {
 };
 logs = { };
 ignores = (
-  { mask = "list"; level = "ALL"; }
+  { mask = "list"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); },
 );
