@@ -8,6 +8,9 @@ C_BOLD="\033[1m\]"
 # Prompt settings
 export PS1="\u @ $C_LIGHTBLUE\w$C_DEFAULT$C_BOLD ⤳ $C_DEFAULT "
 
+# Colorize grep always
+export GREP_OPTIONS='--color=auto'
+
 # Export ~/.profile for RVM assistance
 source ~/.profile
 
