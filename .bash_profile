@@ -1,12 +1,13 @@
 # Colors
 C_BLUE="\[\033[34m\]"
 C_LIGHTBLUE="\[\033[1;34m\]"
+C_BOLDBLUE="\[\e[1;34m\]"
 C_DEFAULT="\[\033[m\]"
 C_BLACK="\[\033[30m\]"
 C_BOLD="\[\033[1m\]"
 
 # Prompt settings
-export PS1="\u @ \w$C_BOLD ⤳ $C_DEFAULT "
+export PS1="$C_BOLD\u $C_DEFAULT@$C_BOLD \w ⤳ $C_DEFAULT "
 
 # Colorize grep always
 export GREP_OPTIONS='--color=auto'
@@ -14,14 +15,23 @@ export GREP_OPTIONS='--color=auto'
 # Export ~/.profile for RVM assistance
 source ~/.profile
 
+# refresh shell
+alias reload="source ~/.bash_profile"
+
 # Some handy aliases for common bash tasks
-alias ls="ls -FGlAhp" # Better ls display
+alias ls="ls -FlAhp" # Better ls display
 alias c="clear" # Simpler than ctrl+l / clear
-alias .2="cd ../../" # Go up 2 levels
-alias .3="cd ../../../" # Go up 3 levels
-alias ~="cd ~" # Go home, where you belong
+
+# Directory navigation shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
 alias desk="cd ~/Desktop" # Shortcut to desktop
+
+# Get public-facing IP
+alias ip='curl ipecho.net/plain ; echo'
 
 # Make a directory and cd to it
 function mkcd {

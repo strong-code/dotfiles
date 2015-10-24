@@ -115,5 +115,6 @@ end
 
 def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
-  puts "Also remember to add NickServ auth command to your irssi config file! (found in /irssi/config)"
+  puts "1. Remember to setup screen irc sessions on your server (screen -S name command)"
+  puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
 end
