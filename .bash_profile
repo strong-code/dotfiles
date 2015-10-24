@@ -3,10 +3,10 @@ C_BLUE="\[\033[34m\]"
 C_LIGHTBLUE="\[\033[1;34m\]"
 C_DEFAULT="\[\033[m\]"
 C_BLACK="\[\033[30m\]"
-C_BOLD="\033[1m\]"
+C_BOLD="\[\033[1m\]"
 
 # Prompt settings
-export PS1="\u @ $C_LIGHTBLUE\w$C_DEFAULT$C_BOLD ⤳ $C_DEFAULT "
+export PS1="\u @ \w$C_BOLD ⤳ $C_DEFAULT "
 
 # Colorize grep always
 export GREP_OPTIONS='--color=auto'
