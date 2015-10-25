@@ -63,7 +63,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%B-%n!%B-%n ";
+  line_start = "%M#%n ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
@@ -118,7 +118,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%K<%n$0$1-%K>%n %|";
+  msgnick = "%M$0%n$1-%M:%n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -146,7 +146,7 @@ abstracts = {
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
-  menick = "%Y$*%n";
+  menick = "%_%M$*%n";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
@@ -173,7 +173,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%_ * $*%n";
+  action_core = "%M* $*%M";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
@@ -245,12 +245,6 @@ abstracts = {
   dccaction = "%_ (*dcc*) $*%n %|";
 
   ##
-  ## color codes
-  ##
-
-  magenta = "%ZC8A0D1"
-
-  ##
   ## statusbar
   ##
 
@@ -259,9 +253,9 @@ abstracts = {
   sb_background = "%n";
 
   # default backround for "default" statusbar group
-  sb_default_bg = "{magenta}";
+  sb_default_bg = "%z585E5A";
   # background for prompt / input line
-  sb_prompt_bg = "%n";
+  sb_prompt_bg = "%M";
   # background for info statusbar
   sb_info_bg = "%8";
   # background for topicbar (same default)
@@ -279,7 +273,7 @@ abstracts = {
 
   prompt = "[$*] ";
 
-  sb = " %c[%n$*%c]%n";
+  sb = " %C[%n$*%C]%n";
   sbmode = "(%c+%n$*)";
   sbaway = " (%GzZzZ%n)";
   sbservertag = ":$0 (change with ^X)";
@@ -288,13 +282,13 @@ abstracts = {
   # activity in statusbar
 
   # ',' separator
-  sb_act_sep = "%c$*";
+  sb_act_sep = "%C$*";
   # normal text
-  sb_act_text = "%c$*";
+  sb_act_text = "%G$*";
   # public message
-  sb_act_msg = "%W$*";
+  sb_act_msg = "%C$*";
   # hilight
-  sb_act_hilight = "%M$*";
+  sb_act_hilight = "%9%W$*%9";
   # hilight with specified color, $0 = color, $1 = text
   sb_act_hilight_color = "$0$1-%n";
 };

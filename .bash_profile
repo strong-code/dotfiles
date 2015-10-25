@@ -5,9 +5,14 @@ C_BOLDBLUE="\[\e[1;34m\]"
 C_DEFAULT="\[\033[m\]"
 C_BLACK="\[\033[30m\]"
 C_BOLD="\[\033[1m\]"
+C_BCYAN="\[\e[1;96m\]"
+C_BBLACK="\[\e[1;90m\]"
+C_BGREEN="\[\e[1;92m\]"
+C_BPURPLE="\[\e[1;95m\]"
+C_PURPLE="\[\e[0;35m\]"
 
 # Prompt settings
-export PS1="$C_BOLD\u $C_DEFAULT@$C_BOLD \w ⤳ $C_DEFAULT "
+export PS1="$C_PURPLE\u @ \w$C_BCYAN$C_BOLD ⤳  $C_DEFAULT"
 
 # Colorize grep always
 export GREP_OPTIONS='--color=auto'
