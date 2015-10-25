@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 # Colors
 C_BLUE="\[\033[34m\]"
 C_LIGHTBLUE="\[\033[1;34m\]"
