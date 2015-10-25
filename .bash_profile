@@ -46,7 +46,7 @@ function mkcd {
 # Git aliases
 alias ga="git add -A"
 alias gs="git status -sb"
-alias gc="git commit"
+alias gc="git commit -m"
 alias gp="git push"
 alias gpom="git push origin master"
 alias gd="git diff"
