@@ -233,3 +233,6 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#python" ); },
   { level = "JOINS PARTS QUITS"; channels = ( "#merc-devel" ); }
 );
+completions = {
+  meme = { value = "ࠉ ҿ ࠉ ҿ"; auto = "yes"; }; 
+};
