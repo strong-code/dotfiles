@@ -234,5 +234,10 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#merc-devel" ); }
 );
 completions = {
-  meme = { value = "ࠉ ҿ ࠉ ҿ"; auto = "yes"; }; 
+  meme = { value = "ࠉ ҿ ࠉ ҿ"; auto = "yes"; };
+  gface = { value = ""; auto = "yes"; };
 };
+hilights = (
+  { text = "BradPitt"; nick = "no"; word = "no"; },
+  { text = "BraddPitt"; nick = "no"; word = "no"; }
+);
