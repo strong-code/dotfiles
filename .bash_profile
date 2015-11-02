@@ -14,7 +14,7 @@ C_BPURPLE="\[\e[1;95m\]"
 C_PURPLE="\[\e[0;35m\]"
 
 # Prompt settings
-export PS1="$C_PURPLE\u @ \w$C_BCYAN$C_BOLD ⤳  $C_DEFAULT"
+export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD ⤳  $C_DEFAULT"
 
 # Colorize grep always
 export GREP_OPTIONS='--color=auto'
