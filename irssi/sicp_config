@@ -205,6 +205,7 @@ settings = {
   autolog_ignore_targets = "NickServ ChanServ HostServ";
   autolog_level = "ALL -CRAP -CLIENTCRAP -CTCPS -MSGS";
   hilight_color = "%_%M";
+  hilight_act_color = "%_%W";
   };
 };
 logs = { };

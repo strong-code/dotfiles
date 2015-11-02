@@ -223,6 +223,7 @@ settings = {
     autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
     autolog_ignore_targets = "NickServ ChanServ HostServ";
     hilight_color = "%_%M";
+    hilight_act_color = "%_%W";
   };
 };
 logs = { };
