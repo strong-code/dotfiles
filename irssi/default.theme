@@ -69,7 +69,7 @@ abstracts = {
   timestamp = "$*";
 
   # any kind of text that needs hilighting, default is to bold
-  hilight = "%_%M$*%_";
+  hilight = "%_$*%_";
 
   # any kind of error message, default is bright red
   error = "%R$*%n";
