@@ -217,11 +217,12 @@ settings = {
     scrollback_lines = "750";
   };
   "fe-common/core" = {
-  autolog = "yes";
-  completion_char = "";
-  completion_strict = "no";
-  autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
-  autolog_ignore_targets = "NickServ ChanServ HostServ";
+    autolog = "yes";
+    completion_char = "";
+    completion_strict = "no";
+    autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
+    autolog_ignore_targets = "NickServ ChanServ HostServ";
+    hilight_color = "%_%M";
   };
 };
 logs = { };
@@ -234,8 +235,7 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#merc-devel" ); }
 );
 completions = {
-  meme = { value = "ࠉ ҿ ࠉ ҿ"; auto = "yes"; };
-  gface = { value = ""; auto = "yes"; };
+  gface = { value = "( ≖‿≖)"; auto = "yes"; };
 };
 hilights = (
   { text = "BradPitt"; nick = "no"; word = "no"; },

@@ -69,7 +69,7 @@ abstracts = {
   timestamp = "$*";
 
   # any kind of text that needs hilighting, default is to bold
-  hilight = "%_$*%_";
+  hilight = "%_%M$*%_";
 
   # any kind of error message, default is bright red
   error = "%R$*%n";
@@ -146,11 +146,11 @@ abstracts = {
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
-  menick = "%_%M$*";
+  menick = "%_$*";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
-  pubmsghinick = "{msgnick $1 $0$2-%n}";
+  pubmsghinick = "{msgnick $1 %M$2-%n}";
 
   # channel name is printed with message
   msgchannel = "%K:%C$*%n";
