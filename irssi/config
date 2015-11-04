@@ -235,10 +235,8 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#python" ); },
   { level = "JOINS PARTS QUITS"; channels = ( "#merc-devel" ); }
 );
-completions = {
-  gface = { value = "( ≖‿≖)"; auto = "yes"; };
-};
+completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
 hilights = (
-  { text = "BradPitt"; nick = "no"; word = "no"; },
-  { text = "BraddPitt"; nick = "no"; word = "no"; }
+  { text = "BradPitt"; nick = "yes"; word = "no"; line = "no"; },
+  { text = "BraddPitt"; nick = "yes"; word = "no"; line = "no"; }
 );

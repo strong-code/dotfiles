@@ -214,5 +214,5 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); },
 );
 hilights = (
-  { text = "tespl"; nick = "no"; word = "no"; }
+  { text = "tespl"; nick = "yes"; word = "no"; line = "no"; }
 );
