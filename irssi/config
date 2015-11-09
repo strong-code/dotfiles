@@ -225,6 +225,9 @@ settings = {
     hilight_color = "%_%M";
     hilight_act_color = "%_%W";
   };
+  "irc/dcc" = {
+    dcc_autoget_masks = "pondering";
+  };
 };
 logs = { };
 ignores = (
