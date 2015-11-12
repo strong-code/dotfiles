@@ -40,6 +40,9 @@ alias desk="cd ~/Desktop" # Shortcut to desktop
 # Get public-facing IP
 alias ip='curl ipecho.net/plain ; echo'
 
+# Open Postgres prompt, assuming it is installed in default place
+alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
+
 # Make a directory and cd to it
 function mkcd {
   mkdir -p "$1" && cd "$1"
