@@ -67,3 +67,8 @@ Session.vim
 /spec/reports/
 /tmp/
 config/env.yml
+
+# Ruby
+# ----------------------------------------------------------------------------------------------
+# Ignore npm dependency directory
+node_modules
