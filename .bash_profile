@@ -28,7 +28,6 @@ alias reload="source ~/.bash_profile"
 # Some handy aliases for common bash tasks
 alias ls="ls -FlAhp" # Better ls display
 alias c="clear" # Simpler than ctrl+l / clear
-alias size="stat -f%z" # Get human-readable file size
 
 # Directory navigation shortcuts
 alias ..="cd .."
@@ -47,6 +46,11 @@ alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
 # Make a directory and cd to it
 function mkcd {
   mkdir -p "$1" && cd "$1"
+}
+
+# Print file bytesize
+function s {
+  echo `stat -f%z "$1"` bytes
 }
 
 # Git aliases
