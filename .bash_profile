@@ -28,6 +28,7 @@ alias reload="source ~/.bash_profile"
 # Some handy aliases for common bash tasks
 alias ls="ls -FlAhp" # Better ls display
 alias c="clear" # Simpler than ctrl+l / clear
+alias size="stat -f%z" # Get human-readable file size
 
 # Directory navigation shortcuts
 alias ..="cd .."
