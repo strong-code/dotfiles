@@ -13,7 +13,7 @@ Servers = (
     chatnet = "Freenode";
     port = "7070";
     use_ssl = "yes";
-    ssl_verify = "no";
+    ssl_verify = "yes";
     autoconnect = "yes";
   }
 );
@@ -38,8 +38,7 @@ chatnets = {
 channels = (
   { name = "#lifting"; chatnet = "Rizon"; autojoin = "Yes"; },
   { name = "merc-devel"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#python"; chatnet = "Rizon"; autojoin = "Yes"; }
+  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
