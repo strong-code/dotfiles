@@ -13,7 +13,7 @@ Servers = (
     chatnet = "Freenode";
     port = "7070";
     use_ssl = "yes";
-    ssl_verify = "yes";
+    ssl_verify = "no";
     autoconnect = "yes";
   }
 );
