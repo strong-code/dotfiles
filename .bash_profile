@@ -42,6 +42,8 @@ alias ip='curl ipecho.net/plain ; echo'
 
 # Open Postgres prompt, assuming it is installed in default place
 alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
+# Export Postgres.app for all command line utilities 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Make a directory and cd to it
 function mkcd {
