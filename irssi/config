@@ -9,11 +9,12 @@ Servers = (
     autoconnect = "yes";
   },
   {
-    address = "weber.freenode.net";
+    address = "chat.freenode.net";
     chatnet = "Freenode";
     port = "7070";
     use_ssl = "yes";
     ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
     autoconnect = "yes";
   }
 );
