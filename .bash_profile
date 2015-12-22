@@ -1,3 +1,9 @@
+# Source .bashrc on login shells
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+# Export ~/.profile for RVM assistance
+if [ -f ~/.profile ]; then . ~/.profile; fi
+
 export TERM=xterm-256color
 
 # Colors
@@ -19,9 +25,6 @@ export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD ⤳  $C_DEFAULT"
 # Colorize grep always
 export GREP_OPTIONS='--color=auto'
 
-# Export ~/.profile for RVM assistance
-source ~/.profile
-
 # refresh shell
 alias reload="source ~/.bash_profile"
 
@@ -42,7 +45,7 @@ alias ip='curl ipecho.net/plain ; echo'
 
 # Open Postgres prompt, assuming it is installed in default place
 alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
-# Export Postgres.app for all command line utilities 
+# Export Postgres.app for all command line utilities
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Make a directory and cd to it
