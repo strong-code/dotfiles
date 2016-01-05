@@ -67,6 +67,7 @@ alias gpu="git pull"
 alias gpom="git push origin master"
 alias gd="git diff"
 alias gwd="git diff --word-diff"
+alias gb="git branch"
 
 # Ruby related aliases
 alias ri="rake install"
