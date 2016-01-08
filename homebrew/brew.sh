@@ -29,6 +29,7 @@ brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" macdown
 brew install postgresql
 brew install node
+brew install httpie
 
 # Clean up
 echo Done! Cleaning up...
