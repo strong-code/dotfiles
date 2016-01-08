@@ -1,5 +1,6 @@
 Host chl
   User root
   HostName 107.170.227.56
+  TCPKeepAlive=yes
   ServerAliveInterval 120
   ServerAliveCountMax 30

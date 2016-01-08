@@ -55,7 +55,7 @@ function mkcd {
 
 # Print file bytesize
 function s {
-  echo `stat -f%z "$1"` bytes
+  echo `wc -c "$1"`
 }
 
 # Git aliases
