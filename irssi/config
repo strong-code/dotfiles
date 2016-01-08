@@ -38,7 +38,6 @@ chatnets = {
 
 channels = (
   { name = "#lifting"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "merc-devel"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
