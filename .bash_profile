@@ -80,9 +80,9 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 alias srd="screen -rd"
 
 # Log in to server and start irssi in one command
-alias irc="clear && ssh -t chl 'screen -d -r irc; bash -l'"
+alias irc="echo -ne "\033]0;IRC\007" && clear && ssh -t chl 'screen -d -r irc; bash -l'"
 
 # Second irssi login for :^) reasons
-alias sicp="clear && ssh -t chl 'screen -d -r sicp; bash -l'"
+alias sicp="echo -ne "\033]0;SICP\007" && clear && ssh -t chl 'screen -d -r sicp; bash -l'"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
