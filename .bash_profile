@@ -53,8 +53,9 @@ function mkcd {
   mkdir -p "$1" && cd "$1"
 }
 
-# Print file bytesize
-function s {
+# Print file name, info and bytesize
+function info {
+  echo `file "$1"`
   echo `wc -c "$1"`
 }
 
