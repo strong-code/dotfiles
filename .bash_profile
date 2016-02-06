@@ -69,6 +69,9 @@ alias gpom="git push origin master"
 alias gd="git diff"
 alias gwd="git diff --word-diff"
 alias gb="git branch"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias gstc="git stash clear"
 
 # Ruby related aliases
 alias ri="rake install"
