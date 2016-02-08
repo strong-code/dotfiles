@@ -27,7 +27,7 @@ LogLevel INFO
 LoginGraceTime 120
 PermitRootLogin yes
 StrictModes yes
-PasswordAuthentication no
+PasswordAuthentication without-password
 RSAAuthentication yes
 PubkeyAuthentication yes
 #AuthorizedKeysFile	%h/.ssh/authorized_keys
