@@ -5,6 +5,7 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 if [ -f ~/.profile ]; then . ~/.profile; fi
 
 export TERM=xterm-256color
+export EDITOR=vim
 
 # Colors
 C_BLUE="\[\033[34m\]"
