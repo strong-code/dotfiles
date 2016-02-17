@@ -4,11 +4,14 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # Export ~/.profile for RVM assistance
 if [ -f ~/.profile ]; then . ~/.profile; fi
 
+# Additional exports
 # MongoDB path
 export MONGO_PATH=/usr/local/mongodb
-
 # PATH export
 export PATH=$PATH:$MONGO_PATH/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# default cli editor
+export EDITOR=vim
+
 
 # Colors
 export TERM=xterm-256color
