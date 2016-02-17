@@ -4,9 +4,14 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # Export ~/.profile for RVM assistance
 if [ -f ~/.profile ]; then . ~/.profile; fi
 
-export TERM=xterm-256color
+# MongoDB path
+export MONGO_PATH=/usr/local/mongodb
+
+# PATH export
+export PATH=$PATH:$MONGO_PATH/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Colors
+export TERM=xterm-256color
 C_BLUE="\[\033[34m\]"
 C_LIGHTBLUE="\[\033[1;34m\]"
 C_BOLDBLUE="\[\e[1;34m\]"
@@ -45,8 +50,6 @@ alias ip='curl ipecho.net/plain ; echo'
 
 # Open Postgres prompt, assuming it is installed in default place
 alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
-# Export Postgres.app for all command line utilities
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Make a directory and cd to it
 function mkcd {
