@@ -29,7 +29,7 @@ chatnets = {
 
   Freenode = {
     type = "IRC";
-    nick = "BraddPitt";
+    nick = "strongcode";
     max_kicks = "1";
     max_msgs = "3";
     max_whois = "30";
@@ -38,7 +38,8 @@ chatnets = {
 
 channels = (
   { name = "#lifting"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
