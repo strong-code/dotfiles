@@ -61,8 +61,8 @@ function mkcd {
 
 # Print file name, info and bytesize
 function info {
-  echo `file "$1"`
-  echo `wc -c "$1"`
+  file $1
+  wc -c $1
 }
 
 # Git aliases
@@ -71,13 +71,19 @@ alias gs="git status -sb"
 alias gc="git commit -m"
 alias gp="git push"
 alias gpu="git pull"
-alias gpom="git push origin master"
+alias gpo="git push origin"
 alias gd="git diff"
 alias gwd="git diff --word-diff"
 alias gb="git branch"
+alias gch="git checkout"
 alias gst="git stash"
 alias gstp="git stash pop"
 alias gstc="git stash clear"
+
+# easy alias for git stash show, where arg $1 is the stash number
+function gsts {
+  git stash show stash@{$1}
+}
 
 # Ruby related aliases
 alias ri="rake install"
