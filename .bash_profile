@@ -80,6 +80,11 @@ alias gst="git stash"
 alias gstp="git stash pop"
 alias gstc="git stash clear"
 
+# Set upstream to origin/whatever
+function gsut {
+  git branch --set-upstream-to=origin/$1 $1
+}
+
 # easy alias for git stash show, where arg $1 is the stash number
 function gsts {
   git stash show stash@{$1}
