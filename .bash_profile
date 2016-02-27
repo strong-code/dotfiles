@@ -106,4 +106,6 @@ alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -t chl 'screen -d -r irc;
 # Second irssi login for :^) reasons
 alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -t chl 'screen -d -r sicp; bash -l'"
 
+alias deploy="git checkout master && git pull && whenever -w"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
