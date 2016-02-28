@@ -29,7 +29,7 @@ C_PURPLE="\[\e[0;35m\]"
 
 # Prompt settings.
 # Show special SSH prompt
-if [-n "$SSH_CONNECTION"]; then
+if [ -n "$SSH_CONNECTION" ]; then
   export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD ⤳  $C_DEFAULT"
 else # normal shell prompt
   export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD ⤳  $C_DEFAULT"
