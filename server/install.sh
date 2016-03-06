@@ -25,8 +25,3 @@ nvm use 0.12.9
 apt-get install npm -y
 
 echo "Finished!"
-
-echo "Installing heroku toolbelt..."
-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-
-echo "Finished!"
