@@ -117,4 +117,5 @@ def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
   puts "1. Remember to setup screen irc sessions on your server (screen -S name command)"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
+  puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
 end
