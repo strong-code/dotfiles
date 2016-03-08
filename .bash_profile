@@ -59,14 +59,14 @@ alias desk="cd ~/Desktop" # Shortcut to desktop
 alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
 
 # Make a directory and cd to it
-function mkcd {
+mkcd () {
   mkdir -p "$1" && cd "$1"
 }
 
 # Print file name, info and bytesize
-function info {
-  file $1
-  wc -c $1
+info () {
+  file "$1"
+  wc -c "$1"
 }
 
 ##
@@ -89,13 +89,13 @@ alias gstp="git stash pop"
 alias gstc="git stash clear"
 
 # Set upstream to origin/whatever
-function gsut {
-  git branch --set-upstream-to=origin/$1 $1
+gsut () {
+  git branch --set-upstream-to=origin/"$1" "$1"
 }
 
 # easy alias for git stash show, where arg $1 is the stash number
-function gsts {
-  git stash show stash@{$1}
+gsts () {
+  git stash show stash@{"$1"}
 }
 
 ##
@@ -115,8 +115,8 @@ alias ri="rake install"
 alias srd="screen -rd"
 
 # Kill screen session by ID or name
-function skill {
-  screen -S $1 -X quit
+skill () {
+  screen -S "$1" -X quit
 }
 
 ##
