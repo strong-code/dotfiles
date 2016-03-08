@@ -116,7 +116,7 @@ alias srd="screen -rd"
 
 # Kill screen session by ID or name
 function skill {
-  screen -X -S $1 quit
+  screen -X -S "$1" quit
 }
 
 ##
