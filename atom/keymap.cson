@@ -29,7 +29,9 @@
 'atom-workspace atom-text-editor:not([mini])':
   'shift-cmd-down': 'editor:move-line-down'
   'shift-cmd-up': 'editor:move-line-up'
-  
+  'cmd-down': ''
+
 'atom-text-editor':
   'shift-cmd-down': 'editor:move-line-down'
   'shift-cmd-up': 'editor:move-line-up'
+  'cmd-down': ''
