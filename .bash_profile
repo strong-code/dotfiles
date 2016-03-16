@@ -113,6 +113,7 @@ alias ri="rake install"
 
 # Easy alias for re-attaching to screen sessions
 alias srd="screen -rd"
+alias slist="screen -ls"
 
 # Kill screen session by ID or name
 skill () {
