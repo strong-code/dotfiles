@@ -213,6 +213,7 @@ ignores = (
   { mask = "list"; level = "ALL"; },
   { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); },
 );
+completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
 hilights = (
   { text = "tespl"; nick = "yes"; word = "no"; line = "no"; }
 );
