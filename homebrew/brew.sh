@@ -30,6 +30,7 @@ brew cask install --appdir="/Applications" macdown
 brew install postgresql
 brew install node
 brew install httpie
+brew install git
 
 # Clean up
 echo Done! Cleaning up...
