@@ -30,8 +30,10 @@
   'shift-cmd-down': 'editor:move-line-down'
   'shift-cmd-up': 'editor:move-line-up'
   'cmd-down': ''
+  'cmd-up': ''
 
 'atom-text-editor':
   'shift-cmd-down': 'editor:move-line-down'
   'shift-cmd-up': 'editor:move-line-up'
   'cmd-down': ''
+  'cmd-up': ''
