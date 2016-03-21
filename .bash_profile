@@ -87,6 +87,7 @@ alias gch="git checkout"
 alias gst="git stash"
 alias gstp="git stash pop"
 alias gstc="git stash clear"
+alias gstls="git stash list"
 
 # Set upstream to origin/whatever
 gsut () {
