@@ -20,7 +20,7 @@ source ~/.bash_rc
 nvm install 0.12.9
 nvm install 4.2
 
-nvm use 0.12.9
+nvm use 4.2
 
 apt-get install npm -y
 
