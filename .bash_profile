@@ -145,3 +145,7 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Get public-facing IP
 alias ip='curl ipecho.net/plain ; echo'
+
+export NVM_DIR="/root/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
