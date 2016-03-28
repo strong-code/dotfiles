@@ -55,9 +55,6 @@ alias .....="cd ../../../.."
 alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
 alias desk="cd ~/Desktop" # Shortcut to desktop
 
-# Open Postgres prompt, assuming it is installed in default place
-alias psql="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
-
 # Make a directory and cd to it
 mkcd () {
   mkdir -p "$1" && cd "$1"
@@ -148,4 +145,3 @@ alias ip='curl ipecho.net/plain ; echo'
 
 export NVM_DIR="/root/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
