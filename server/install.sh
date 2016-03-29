@@ -17,10 +17,9 @@ source ~/.bash_profile
 source ~/.profile
 source ~/.bash_rc
 
-nvm install 0.12.9
 nvm install 4.2
 
-nvm use 4.2
+nvm alias default node
 
 apt-get install npm -y
 
