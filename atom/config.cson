@@ -1,5 +1,6 @@
 "*":
-  core: {}
+  core:
+    allowPendingPaneItems: false
   "custom-title":
     template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
