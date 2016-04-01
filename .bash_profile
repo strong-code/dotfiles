@@ -141,7 +141,7 @@ alias reload="source ~/.bash_profile"
 alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Get public-facing IP
-ip () {
+myip () {
   curl ipecho.net/plain
 }
 
