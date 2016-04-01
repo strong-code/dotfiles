@@ -142,7 +142,7 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Get public-facing IP
 myip () {
-  PUB_IP=$(curl ipecho.net/plain)
+  PUB_IP=$(curl -s ipecho.net/plain)
   echo "$PUB_IP"
 }
 
