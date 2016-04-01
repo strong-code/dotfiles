@@ -142,8 +142,8 @@ alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
 
 # Get public-facing IP
 myip () {
-  PUB_IP="curl ipecho.net/plain"
-  echo $PUB_IP
+  PUB_IP=$(curl ipecho.net/plain)
+  echo "$PUB_IP"
 }
 
 export NVM_DIR="/root/.nvm"
