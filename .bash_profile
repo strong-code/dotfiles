@@ -123,10 +123,10 @@ skill () {
 ##
 
 # Log in to server and start irssi named screen session with named terminal tab
-alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -x -C -t chl 'screen -d -r irc; bash -l'"
+alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -x -t chl 'screen -d -r irc; bash -l'"
 
 # Second irssi login for :^) reasons
-alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -C -t chl 'screen -d -r sicp; bash -l'"
+alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -t chl 'screen -d -r sicp; bash -l'"
 
 ##
 # Misc aliases/functions
