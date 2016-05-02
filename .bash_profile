@@ -43,9 +43,9 @@ parse_git_branch() {
 
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
-  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD [$(parse_git_branch)] ⤳  $C_DEFAULT"
+  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE $(parse_git_branch)$C_BOLD ⤳  $C_DEFAULT"
 else # normal shell prompt
-  export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD [$(parse_git_branch)] ⤳  $C_DEFAULT"
+  export PS1="$C_BPURPLE\u @ \w$C_BCYAN $(parse_git_branch)$C_BOLD ⤳  $C_DEFAULT"
 fi
 
 ##
