@@ -72,6 +72,7 @@ end
 def install_git
   symlink("git/.gitconfig", "~/.gitconfig")
   symlink("git/.gitignore", "~/.gitignore")
+  symlink("git/.git-prompt.sh", "~/.git-prompt.sh")
   `git config --global core.excludesfile ~/.gitignore`
   puts "Done!"
 end

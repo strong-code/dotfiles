@@ -7,7 +7,7 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # Export ~/.profile for RVM assistance
 if [ -f ~/.profile ]; then . ~/.profile; fi
 # Source git-prompt script
-source ./git/.git-prompt.sh
+source ~/.git-prompt.sh
 # MongoDB path
 export MONGO_PATH=/usr/local/mongodb
 # PATH export
