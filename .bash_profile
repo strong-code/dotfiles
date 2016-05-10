@@ -6,6 +6,8 @@
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # Export ~/.profile for RVM assistance
 if [ -f ~/.profile ]; then . ~/.profile; fi
+# Source git-prompt script
+source ./git/.git-prompt.sh
 # MongoDB path
 export MONGO_PATH=/usr/local/mongodb
 # PATH export
@@ -43,9 +45,9 @@ parse_git_branch() {
 
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
-  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD$(parse_git_branch) ⤳  $C_DEFAULT"
+  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
 else # normal shell prompt
-  export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD$(parse_git_branch) ⤳  $C_DEFAULT"
+  export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
 fi
 
 ##
