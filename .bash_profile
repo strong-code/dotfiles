@@ -159,11 +159,3 @@ cd () {
   builtin cd "$@" && setnvm
 }
 
-setnvm () {
-  if [ -s $PWD/package.json ]; then
-    NODE_VER=$(ruby -e "require 'json'; puts JSON.parse(File.read(ARGV[0]))['engines']['node']" package.json)
-    echo "Using node version $NODE_VER found in package.json"
-    source ~/.nvm/nvm.sh
-    nvm use $NODE_VER
-  fi
-}
