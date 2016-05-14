@@ -39,10 +39,6 @@ export GREP_OPTIONS='--color=auto'
 # Prompt settings.
 ##
 
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
   export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
