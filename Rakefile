@@ -126,4 +126,5 @@ def success_message
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
   puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
   puts "4. Remember to nvm install preferred node version (6+)"
+  puts "5. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"
 end
