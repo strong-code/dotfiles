@@ -38,6 +38,8 @@ chatnets = {
 
 channels = (
   { name = "#lifting"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#skyrealm"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#botto"; chatnet = "Rizon"; autojoin = "Yes"; },
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
