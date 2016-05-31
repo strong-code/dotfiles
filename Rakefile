@@ -16,7 +16,8 @@ task :install do
     "OSX sytem config" => Proc.new { install_osx },
     "Git config" => Proc.new { install_git },
     "SSH config" => Proc.new { install_ssh },
-    "Irssi config" => Proc.new { install_irssi }
+    "Irssi config" => Proc.new { install_irssi },
+    "NVM" => Proc.new { install_nvm }
   }
 
   begin
@@ -89,6 +90,11 @@ def install_irssi
   puts "Done!"
 end
 
+def install_nvm
+  `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`
+  puts "Done!"
+end
+
 # Shell out to interactive prompt for shell installations
 def shell_out(command)
   puts "Entering bash prompt..."
@@ -119,4 +125,6 @@ def success_message
   puts "1. Remember to setup screen irc sessions on your server (screen -S name command)"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
   puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
+  puts "4. Remember to nvm install preferred node version (6+)"
+  puts "5. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"
 end

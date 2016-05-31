@@ -78,6 +78,7 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gpu="git pull"
 alias gpo="git push origin"
+alias gpc="git push origin \$__git_ps1"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gwd="git diff --word-diff"
@@ -148,5 +149,5 @@ myip () {
   echo "$PUB_IP"
 }
 
-export NVM_DIR="/root/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

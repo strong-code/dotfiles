@@ -17,7 +17,7 @@ source ~/.bash_profile
 source ~/.profile
 source ~/.bash_rc
 
-nvm install 4.2
+nvm install 6.1
 
 nvm alias default node
 
