@@ -1,10 +1,13 @@
 "*":
   core:
-    allowPendingPaneItems: false
+    openEmptyEditorOnStart: false
   "custom-title":
     template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
+    fontFamily: "mononoki"
+    fontSize: 15
     invisibles: {}
+    showIndentGuide: true
   "exception-reporting":
     userId: "f16ef76b-d465-2577-dd91-e49c1ffce52d"
   minimap: {}
