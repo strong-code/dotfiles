@@ -17,7 +17,8 @@ task :install do
     "Git config" => Proc.new { install_git },
     "SSH config" => Proc.new { install_ssh },
     "Irssi config" => Proc.new { install_irssi },
-    "NVM" => Proc.new { install_nvm }
+    "NVM" => Proc.new { install_nvm },
+    "Vim" => Proc.new { install_vim }
   }
 
   begin
@@ -92,6 +93,11 @@ end
 
 def install_nvm
   `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`
+  puts "Done!"
+end
+
+def install_vim
+  symlink("vim/.vimrc", "~/.vimrc")
   puts "Done!"
 end
 
