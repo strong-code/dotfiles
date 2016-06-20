@@ -1,0 +1,19 @@
+'context-menu':
+  'atom-text-editor': [
+    'label': 'Split Diff'
+    'submenu':[
+      { 'label': 'Toggle', 'command': 'split-diff:toggle' }
+    ]
+  ]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Split Diff'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'split-diff:toggle' }
+      ]
+    ]
+  }
+]
