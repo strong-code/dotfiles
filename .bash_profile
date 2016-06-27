@@ -14,6 +14,8 @@ export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin
 # default cli editor
 export EDITOR=vim
+export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
 ##
 # Colors
