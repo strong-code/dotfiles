@@ -69,3 +69,6 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Set fastest key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0.02
