@@ -147,6 +147,8 @@
 	<false/>
 	<key>WindowTitle</key>
 	<string> </string>
+	<key>deleteSendsBackspace</key>
+	<true/>
 	<key>name</key>
 	<string>chl</string>
 	<key>noWarnProcesses</key>
@@ -160,5 +162,7 @@
 	<integer>1</integer>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<true/>
 </dict>
 </plist>
