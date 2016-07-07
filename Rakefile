@@ -68,6 +68,7 @@ end
 
 def install_osx
   symlink("osx/.osx", "~/.osx")
+  symlink("osx/.hushlogin", "~/.hushlogin")
   puts "Done!"
 end
 
