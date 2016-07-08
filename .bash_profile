@@ -16,6 +16,8 @@ export PATH=$PATH:$MONGO_PATH/bin:/Applications/Postgres.app/Contents/Versions/9
 export EDITOR=vim
 export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
+export GIT_PS1_SHOWSTASHSTATE=1 # Shows indicator if branch contains stashes
+export GIT_PS1_SHOWDIRTYSTATE=1 # Shows indicator if branch is in dirty state
 
 ##
 # Colors
