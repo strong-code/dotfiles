@@ -9,6 +9,7 @@ task :install do
   puts
 
   modules = {
+    "Code directory" => Proc.new { setup_dirs },
     "System fonts" => Proc.new { install_fonts },
     "Ruby and RVM" => Proc.new { install_ruby },
     "Bash config" => Proc.new { install_bash },
@@ -34,6 +35,12 @@ task :install do
 end
 
 private
+
+def setup_dirs
+  puts "Creating code directory at: ~/Desktop/code"
+  shell_out('mkdir -p ~/Desktop/code')
+  puts "Done!"
+end
 
 def install_fonts
   puts "Installing San Francisco font..."
