@@ -101,6 +101,8 @@ end
 
 def install_nvm
   `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`
+  `nvm install 6.0`
+  `nvm use 6.0`
   puts "Done!"
 end
 
@@ -139,6 +141,5 @@ def success_message
   puts "1. Remember to setup screen irc sessions on your server (screen -S name command)"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
   puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
-  puts "4. Remember to nvm install preferred node version (6+)"
-  puts "5. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"
+  puts "4. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"
 end
