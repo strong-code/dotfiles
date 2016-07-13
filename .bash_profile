@@ -78,8 +78,7 @@ info () {
 alias ga="git add -A"
 alias gs="git status -sb"
 alias gc="git commit -m"
-alias gp="git push"
-alias gpu="git pull"
+alias gp="git pull"
 alias gpo="git push origin"
 alias gpc="git push origin \$__git_ps1"
 alias gd="git diff"
@@ -98,8 +97,14 @@ gsut () {
 }
 
 # easy alias for git stash show, where arg $1 is the stash number
+# -p flag shows expanded view
 gsts () {
-  git stash show stash@{"$1"}
+  if [ "$1" == "-p" ];
+  then
+    git stash show -p stash@{"$2"}
+  else
+    git stash show stash@{"$1"}
+  fi
 }
 
 ##
