@@ -8,16 +8,15 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 if [ -f ~/.profile ]; then . ~/.profile; fi
 # Source git-prompt script
 source ~/.git-prompt.sh
-# MongoDB path
-export MONGO_PATH=/usr/local/mongodb
-# PATH export
-export PATH=$PATH:$MONGO_PATH/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin
-# default cli editor
-export EDITOR=vim
-export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 export GIT_PS1_SHOWSTASHSTATE=1 # Shows indicator if branch contains stashes
 export GIT_PS1_SHOWDIRTYSTATE=1 # Shows indicator if branch is in dirty state
+
+# default cli editor
+export EDITOR=vim
+
+# Android/Java paths
+export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
 ##
 # Colors
@@ -79,8 +78,7 @@ info () {
 alias ga="git add -A"
 alias gs="git status -sb"
 alias gc="git commit -m"
-alias gp="git push"
-alias gpu="git pull"
+alias gp="git pull"
 alias gpo="git push origin"
 alias gpc="git push origin \$__git_ps1"
 alias gd="git diff"
@@ -99,8 +97,14 @@ gsut () {
 }
 
 # easy alias for git stash show, where arg $1 is the stash number
+# -p flag shows expanded view
 gsts () {
-  git stash show stash@{"$1"}
+  if [ "$1" == "-p" ];
+  then
+    git stash show -p stash@{"$2"}
+  else
+    git stash show stash@{"$1"}
+  fi
 }
 
 ##
