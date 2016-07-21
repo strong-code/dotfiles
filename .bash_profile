@@ -80,7 +80,6 @@ alias gs="git status -sb"
 alias gc="git commit -m"
 alias gp="git pull"
 alias gpo="git push origin"
-alias gpc="git push origin \$__git_ps1"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gwd="git diff --word-diff"
@@ -90,6 +89,12 @@ alias gst="git stash"
 alias gstp="git stash pop"
 alias gstc="git stash clear"
 alias gstls="git stash list"
+
+# Push to current branch with remote origin
+gpc () {
+  branch=$(git rev-parse --abbrev-ref HEAD 1>/dev/null)
+  git push origin $branch
+}
 
 # Set upstream to origin/whatever
 gsut () {
