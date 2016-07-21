@@ -44,9 +44,9 @@ export GREP_OPTIONS='--color=auto'
 
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
-  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
+  export PS1="$C_BCYAN[SSH] \u @ \w$C_BPURPLE$C_BOLD | \$(__git_ps1) ⤳  $C_DEFAULT"
 else # normal shell prompt
-  export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
+  export PS1="$C_BPURPLE\u @ \w$C_BCYAN$C_BOLD | \$(__git_ps1) ⤳  $C_DEFAULT"
 fi
 
 ##
