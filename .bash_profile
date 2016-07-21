@@ -93,7 +93,6 @@ alias gstls="git stash list"
 # Push to current branch with remote origin
 gpc () {
   branch=$(git rev-parse --abbrev-ref HEAD 1>/dev/null)
-  echo Pushing to origin/"$branch"
   git push origin $branch
 }
 
