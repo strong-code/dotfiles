@@ -170,15 +170,15 @@ nvm () {
 }
 
 node () {
-  unset -f nvm
+  unset -f node
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  nvm "$@"
+  node "$@"
 }
 
 npm () {
-  unset -f nvm
+  unset -f npm
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  nvm "$@"
+  npm "$@"
 }
