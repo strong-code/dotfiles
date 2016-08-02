@@ -128,7 +128,7 @@ end
 def symlink(source, target)
   target = File.expand_path(target)
   puts "Linking #{target} from #{source}"
-  shell_out("ln -s \"$PWD/#{source}\" \"#{target}\"")
+  shell_out("ln -s $PWD/#{source} #{target}")
 end
 
 def should_install?(section_name)
