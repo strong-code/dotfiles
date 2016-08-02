@@ -185,3 +185,6 @@ npm () {
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
   npm "$@"
 }
+
+# Add chef path export
+export PATH=/opt/chefdk/bin:$PATH
