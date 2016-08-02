@@ -6,6 +6,9 @@
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # Export ~/.profile for RVM assistance
 if [ -f ~/.profile ]; then . ~/.profile; fi
+# Source rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 # Source git-prompt script
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWSTASHSTATE=1 # Shows indicator if branch contains stashes
