@@ -40,13 +40,12 @@ end
 private
 
 def install_fonts
-  puts "Installing San Francisco font..."
-  shell_out("ruby -e \"$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)\"")
-  if (osx?)
-    puts "Installing Mononoki font..."
-    bash("unzip ./fonts/mononoki.zip -d ~/Library/Fonts/")
-  end
+  if (!osx?) puts "Not on OSX, skipping"; return
 
+  puts "Installing San Francisco font..."
+  bash("unzip ./fonts/SanFrancisco.zip -d /Library/Fonts/")
+  puts "Installing Mononoki font..."
+  bash("unzip ./fonts/mononoki.zip -d /Library/Fonts/")
   puts "Done!"
 end
 
