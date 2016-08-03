@@ -42,6 +42,11 @@ private
 def install_fonts
   puts "Installing San Francisco font..."
   shell_out("ruby -e \"$(curl -fsSL https://raw.github.com/supermarin/YosemiteSanFranciscoFont/master/install)\"")
+  if (osx?)
+    puts "Installing Mononoki font..."
+    bash("unzip ./fonts/mononoki.zip -d ~/Library/Fonts/")
+  end
+
   puts "Done!"
 end
 
@@ -65,10 +70,8 @@ def install_bash
 end
 
 def install_homebrew
-  if (!(/darwin/ =~ RUBY_PLATFORM) != nil)
-    puts "Skipping Homebrew installation for non-OSX system"
-    return
-  end
+  if (!osx?) puts "Not on OSX, skipping"; return
+
   puts "Running brew.sh for Homebrew install and app setup..."
   # Install homebrew
   shell_out("ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"")
@@ -78,10 +81,7 @@ def install_homebrew
 end
 
 def install_osx
-  if (!(/darwin/ =~ RUBY_PLATFORM) != nil)
-    puts "Skipping OSX installation for non-OSX system"
-    return
-  end
+  if (!osx?) puts "Not on OSX, skipping"; return
 
   shell_out("chmod +x osx/.osx && sh osx/.osx")
   make_symlink("osx/.hushlogin", "~/.hushlogin")
@@ -152,10 +152,13 @@ def bash(command)
   `bash -c #{escaped_command}`
 end
 
+def osx?
+  (/darwin/ =~ RUBY_PLATFORM) != nil
+end
+
 def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
   puts "1. Remember to add ssh keys to your server, github and other services as needed"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
   puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
-  puts "4. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"
 end
