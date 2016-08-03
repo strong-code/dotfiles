@@ -1,7 +1,7 @@
 require 'rake'
 require 'open3'
 
-task :install do
+task :install, [:all] do |_, args|
   puts
   puts "======================================================"
   puts "Welcome to your dotfile installation!"
@@ -9,7 +9,6 @@ task :install do
   puts
 
   modules = {
-    "Code directory" => Proc.new { setup_dirs },
     "System fonts" => Proc.new { install_fonts },
     "Ruby and RVM" => Proc.new { install_ruby },
     "Bash config" => Proc.new { install_bash },
@@ -23,24 +22,22 @@ task :install do
   }
 
   begin
-    modules
-      .select! { |k,_| should_install?(k) }
+    if (args[:all])
+      modules.each{ |k,v| puts "Installing module: #{k}"; v.call }
+    else
+      modules
+      .select { |k,_| should_install?(k) }
       .each { |k,v| puts "Installing module: #{k}"; v.call }
+    end
 
     success_message
   rescue => e
     puts "Something went wrong with installing!"
-    puts e
+    p e
   end
 end
 
 private
-
-def setup_dirs
-  puts "Creating code directory at: ~/Desktop/code"
-  shell_out('mkdir -p ~/Desktop/code')
-  puts "Done!"
-end
 
 def install_fonts
   puts "Installing San Francisco font..."
@@ -49,65 +46,78 @@ def install_fonts
 end
 
 def install_ruby
-  puts "Installing RVM..."
+  puts "Installing rbenv..."
   # Run RVM setup
-  shell_out("bash ./ruby/setup.sh")
+  shell_out("git clone https://github.com/rbenv/rbenv.git ~/.rbenv")
+  shell_out("echo export PATH=\"$HOME/.rbenv/bin:$PATH\"' >> ~/.bash_profile")
+  shell_out("~/.rbenv/bin/rbenv init")
 
-  symlink("ruby/.gemrc", "~/.gemrc")
+  make_symlink("ruby/.gemrc", "~/.gemrc")
   puts "Done!"
 end
 
 def install_bash
   puts "Backing up contents of ~/.bash_profile..."
   `mv ~/.bash_profile ~/.bash_profile_backup`
-  symlink(".bash_profile", "~/.bash_profile")
+  make_symlink(".bash_profile", "~/.bash_profile")
+  bash("source ~/.bash_profile")
   puts "Done!"
 end
 
 def install_homebrew
+  if (!(/darwin/ =~ RUBY_PLATFORM) != nil)
+    puts "Skipping Homebrew installation for non-OSX system"
+    return
+  end
   puts "Running brew.sh for Homebrew install and app setup..."
   # Install homebrew
   shell_out("ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"")
   # Run homebrew bash script
-  shell_out("bash ./homebrew/brew.sh")
+  shell_out("chmod +x ./homebrew/brew.sh && bash ./homebrew/brew.sh")
   puts "Done!"
 end
 
 def install_osx
-  symlink("osx/.osx", "~/.osx")
-  symlink("osx/.hushlogin", "~/.hushlogin")
+  if (!(/darwin/ =~ RUBY_PLATFORM) != nil)
+    puts "Skipping OSX installation for non-OSX system"
+    return
+  end
+
+  shell_out("chmod +x osx/.osx && sh osx/.osx")
+  make_symlink("osx/.hushlogin", "~/.hushlogin")
   puts "Done!"
 end
 
 def install_git
-  symlink("git/.gitconfig", "~/.gitconfig")
-  symlink("git/.gitignore", "~/.gitignore")
-  symlink("git/.git-prompt.sh", "~/.git-prompt.sh")
+  make_symlink("git/.gitconfig", "~/.gitconfig")
+  make_symlink("git/.gitignore", "~/.gitignore")
+  make_symlink("git/.git-prompt.sh", "~/.git-prompt.sh")
   `git config --global core.excludesfile ~/.gitignore`
   puts "Done!"
 end
 
 def install_ssh
   `mkdir ~/.ssh` if !Dir.exist?(File.expand_path("~/.ssh"))
-  symlink("ssh/.config", "~/.ssh/config")
+  make_symlink("ssh/.config", "~/.ssh/config")
   puts "Done!"
 end
 
 def install_irssi
-  # Irssi MUST be installed first (through brew.sh)
-  symlink("irssi/config", "~/.irssi/config")
+  `mkdir -p ~/.irssi` if !Dir.exist?(File.expand_path("~/.irssi"))
+  make_symlink("irssi/config", "~/.irssi/config")
   puts "Done!"
 end
 
 def install_nvm
   `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`
-  `nvm install 6.0`
-  `nvm use 6.0`
+  bash("source ~/.bash_profile")
+  bash("nvm install 6")
+  bash("nvm use 6")
   puts "Done!"
 end
 
 def install_vim
-  symlink("vim/.vimrc", "~/.vimrc")
+  make_symlink("vim/.vimrc", "~/.vimrc")
   puts "Done!"
 end
 
@@ -125,10 +135,10 @@ def shell_out(command)
   puts "Finished. Back to Rakefile!"
 end
 
-def symlink(source, target)
-  target = File.expand_path(target)
-  puts "Linking #{target} from #{source}"
-  shell_out("ln -s $PWD/#{source} #{target}")
+def make_symlink(source, target)
+  source = File.expand_path(source)
+  puts "Linking #{target} -> #{source}"
+  shell_out("ln -s #{source} #{target}")
 end
 
 def should_install?(section_name)
@@ -136,9 +146,15 @@ def should_install?(section_name)
   STDIN.gets.chomp == 'y'
 end
 
+def bash(command)
+  require 'shellwords'
+  escaped_command = Shellwords.escape(command)
+  `bash -c #{escaped_command}`
+end
+
 def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
-  puts "1. Remember to setup screen irc sessions on your server (screen -S name command)"
+  puts "1. Remember to add ssh keys to your server, github and other services as needed"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
   puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
   puts "4. Remember to install editor font: https://github.com/madmalik/mononoki/tree/master"

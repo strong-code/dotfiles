@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Make sure we’re using the latest Homebrew.
 echo Updating brew...
