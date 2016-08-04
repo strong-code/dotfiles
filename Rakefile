@@ -40,7 +40,7 @@ end
 private
 
 def install_fonts
-  if (!osx?) puts "Not on OSX, skipping"; return
+  if (!osx?) then puts "Not on OSX, skipping"; return
 
   puts "Installing San Francisco font..."
   bash("unzip ./fonts/SanFrancisco.zip -d /Library/Fonts/")
@@ -69,7 +69,7 @@ def install_bash
 end
 
 def install_homebrew
-  if (!osx?) puts "Not on OSX, skipping"; return
+  if (!osx?) then puts "Not on OSX, skipping"; return
 
   puts "Running brew.sh for Homebrew install and app setup..."
   # Install homebrew
@@ -80,7 +80,7 @@ def install_homebrew
 end
 
 def install_osx
-  if (!osx?) puts "Not on OSX, skipping"; return
+  if (!osx?) then puts "Not on OSX, skipping"; return
 
   shell_out("chmod +x osx/.osx && sh osx/.osx")
   make_symlink("osx/.hushlogin", "~/.hushlogin")
