@@ -164,12 +164,6 @@ def should_install?(section_name)
   STDIN.gets.chomp == 'y'
 end
 
-def bash(command)
-  require 'shellwords'
-  escaped_command = Shellwords.escape(command)
-  `bash -c #{escaped_command}`
-end
-
 def osx?
   (/darwin/ =~ RUBY_PLATFORM) != nil
 end
