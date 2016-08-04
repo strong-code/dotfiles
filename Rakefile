@@ -12,13 +12,14 @@ task :install, [:all] do |_, args|
     "System fonts" => Proc.new { install_fonts },
     "Ruby and RVM" => Proc.new { install_ruby },
     "Bash config" => Proc.new { install_bash },
+    "NVM" => Proc.new { install_nvm },
     "Homebrew config" => Proc.new { install_homebrew },
     "OSX sytem config" => Proc.new { install_osx },
     "Git config" => Proc.new { install_git },
     "SSH config" => Proc.new { install_ssh },
     "Irssi config" => Proc.new { install_irssi },
-    "NVM" => Proc.new { install_nvm },
-    "Vim" => Proc.new { install_vim }
+    "Vim" => Proc.new { install_vim },
+    "Atom" => Proc.new { install_atom }
   }
 
   begin
@@ -31,6 +32,7 @@ task :install, [:all] do |_, args|
     end
 
     success_message
+    exec(". ~/.bash_profile")
   rescue => e
     puts "Something went wrong with installing!"
     p e
@@ -46,9 +48,9 @@ def install_fonts
   end
 
   puts "Installing San Francisco font..."
-  bash("unzip ./fonts/SanFrancisco.zip -d /Library/Fonts/")
+  system("unzip ./fonts/SanFrancisco.zip -d /Library/Fonts/")
   puts "Installing Mononoki font..."
-  bash("unzip ./fonts/mononoki.zip -d /Library/Fonts/")
+  system("unzip ./fonts/mononoki.zip -d /Library/Fonts/")
   puts "Done!"
 end
 
@@ -65,9 +67,9 @@ end
 
 def install_bash
   puts "Backing up contents of ~/.bash_profile..."
-  `mv ~/.bash_profile ~/.bash_profile_backup`
+  system("mv ~/.bash_profile ~/.bash_profile_backup")
   make_symlink(".bash_profile", "~/.bash_profile")
-  bash("source ~/.bash_profile")
+  system(". ~/.bash_profile")
   puts "Done!"
 end
 
@@ -100,33 +102,37 @@ def install_git
   make_symlink("git/.gitconfig", "~/.gitconfig")
   make_symlink("git/.gitignore", "~/.gitignore")
   make_symlink("git/.git-prompt.sh", "~/.git-prompt.sh")
-  `git config --global core.excludesfile ~/.gitignore`
+  system("git config --global core.excludesfile ~/.gitignore")
   puts "Done!"
 end
 
 def install_ssh
-  `mkdir ~/.ssh` if !Dir.exist?(File.expand_path("~/.ssh"))
+  system("mkdir ~/.ssh") if !Dir.exist?(File.expand_path("~/.ssh"))
   make_symlink("ssh/.config", "~/.ssh/config")
   puts "Done!"
 end
 
 def install_irssi
-  `mkdir -p ~/.irssi` if !Dir.exist?(File.expand_path("~/.irssi"))
+  system("mkdir -p ~/.irssi") if !Dir.exist?(File.expand_path("~/.irssi"))
   make_symlink("irssi/config", "~/.irssi/config")
   puts "Done!"
 end
 
 def install_nvm
-  `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`
-  bash("source ~/.bash_profile")
-  bash("nvm install 6")
-  bash("nvm use 6")
+  shell_out("curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash")
+  shell_out(". ~/.bash_profile && nvm install 6 && nvm alias default node")
   puts "Done!"
 end
 
 def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
   puts "Done!"
+end
+
+def install_atom
+ make_symlink("atom/config.cson", "~/.atom/config.cson", true)
+ make_symlink("atom/keymap.cson", "~/.atom/keymap.cson", true)
+ make_symlink("atom/styles.less", "~/.atom/styles.less", true)
 end
 
 # Shell out to interactive prompt for shell installations
@@ -143,10 +149,14 @@ def shell_out(command)
   puts "Finished. Back to Rakefile!"
 end
 
-def make_symlink(source, target)
+def make_symlink(source, target, force = false)
   source = File.expand_path(source)
   puts "Linking #{target} -> #{source}"
-  shell_out("ln -s #{source} #{target}")
+  if force
+    system("ln -sf #{source} #{target}")
+  else
+    system("ln -s #{source} #{target}")
+  end
 end
 
 def should_install?(section_name)
@@ -168,5 +178,4 @@ def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
   puts "1. Remember to add ssh keys to your server, github and other services as needed"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
-  puts "3. Remember to re-import Atom packages, styles.less and config.cson files"
 end
