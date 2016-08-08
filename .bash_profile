@@ -14,6 +14,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1 # Shows indicator if branch is in dirty state
 # default cli editor
 export EDITOR=vim
 
+# Don't log history if command begins with space
+export HISTIGNORE="[ \t]*"
+
 # Android/Java paths
 export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
