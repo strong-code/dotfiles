@@ -26,6 +26,10 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+
 'atom-workspace atom-text-editor:not([mini])':
   'shift-cmd-down': 'editor:move-line-down'
   'shift-cmd-up': 'editor:move-line-up'
