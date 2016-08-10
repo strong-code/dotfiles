@@ -28,6 +28,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Trackpad: enable 3-finger tap to lookup definitions
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
+
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
@@ -72,3 +75,8 @@ defaults write com.apple.dock autohide -bool true
 
 # Set fastest key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write -g InitialKeyRepeat -int 15
+
+# Set top left hot corner to display sleep
+defaults write com.apple.dock wvous-tl-corner -int 5
+defaults write com.apple.dock wvous-tl-modifier -int 0
