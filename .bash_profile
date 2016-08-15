@@ -116,6 +116,12 @@ gsts () {
 }
 
 ##
+# Markdown
+##
+
+alias eme="open -a eme"
+
+##
 # Ruby
 ##
 
