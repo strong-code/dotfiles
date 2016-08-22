@@ -163,7 +163,11 @@ alias reload="source ~/.bash_profile"
 
 # Upload piped input to ix.io and copy resulting URL to clipboard
 # ex: `cat my_image.png | pbcopy`
-alias paste="curl -s -F 'f:1=<-' ix.io | pbcopy"
+paste() {
+  a=$(cat)
+  curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty | pbcopy
+}
+
 
 # Get public-facing IP
 myip () {
