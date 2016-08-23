@@ -19,7 +19,8 @@ task :install, [:all] do |_, args|
     "SSH config" => Proc.new { install_ssh },
     "Irssi config" => Proc.new { install_irssi },
     "Vim" => Proc.new { install_vim },
-    "Atom" => Proc.new { install_atom }
+    "Atom" => Proc.new { install_atom },
+    "TaskMaster" => Proc.new { install_taskmaster }
   }
 
   begin
@@ -133,6 +134,11 @@ def install_atom
  make_symlink("atom/config.cson", "~/.atom/config.cson", true)
  make_symlink("atom/keymap.cson", "~/.atom/keymap.cson", true)
  make_symlink("atom/styles.less", "~/.atom/styles.less", true)
+end
+
+def install_taskmaster
+  make_symlink("task/.task", "~/.task", true)
+  make_symlink("task/.taskrc", "~/.taskrc", true)
 end
 
 # Shell out to interactive prompt for shell installations
