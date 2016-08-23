@@ -28,6 +28,9 @@ echo Done! Installing development applications...
 brew cask install --appdir="/Applications" atom
 brew install postgresql
 brew install git
+brew install task
+brew install taskd
+brew install tasksh
 
 # Clean up
 echo Done! Cleaning up...
