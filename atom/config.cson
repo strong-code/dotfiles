@@ -4,10 +4,14 @@
   "custom-title":
     template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
+    autoIndentOnPaste: false
     fontFamily: "mononoki"
     fontSize: 15
-    invisibles: {}
+    invisibles:
+      tab: " "
     showIndentGuide: true
+    showInvisibles: true
+    tabType: "soft"
   "exception-reporting":
     userId: "f16ef76b-d465-2577-dd91-e49c1ffce52d"
   minimap: {}
