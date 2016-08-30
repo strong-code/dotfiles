@@ -162,7 +162,11 @@ alias c="clear"
 alias reload="source ~/.bash_profile"
 
 # Upload piped input to ix.io and copy resulting URL to clipboard
-# ex: `cat my_image.png | pbcopy`
+
+# If we're not on osx, alias paste to xclip utlity
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  alias pbcopy="xsel --clipboard --input"
+fi
 paste() {
   a=$(cat)
   curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty | pbcopy
