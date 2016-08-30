@@ -164,13 +164,17 @@ alias reload="source ~/.bash_profile"
 # Upload piped input to ix.io and copy resulting URL to clipboard
 
 # If we're not on osx, alias paste to xclip utlity
-if [ "$(uname)" == "Linux" ]; then
-  alias pbcopy="xclip -selection clipboard"
+if [ "$(uname)" == "Darwin" ]; then
+  paste() {
+    a=$(cat)
+    curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty | pbcopy
+  }
+elif [ "$(uname)" == "Linux" ]; then
+  paste() {
+    a=$(cat)
+    curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty
+  }
 fi
-paste() {
-  a=$(cat)
-  curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty | pbcopy
-}
 
 
 # Get public-facing IP
