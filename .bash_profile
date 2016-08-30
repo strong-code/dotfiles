@@ -172,7 +172,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(uname)" == "Linux" ]; then
   paste() {
     a=$(cat)
-    curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}' | tee /dev/tty
+    curl -X POST -s -d "$a" http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/"$1}'
   }
 fi
 
