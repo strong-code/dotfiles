@@ -164,8 +164,8 @@ alias reload="source ~/.bash_profile"
 # Upload piped input to ix.io and copy resulting URL to clipboard
 
 # If we're not on osx, alias paste to xclip utlity
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  alias pbcopy="xsel --clipboard --input"
+if [ "$(uname)" == "Linux" ]; then
+  alias pbcopy="xclip -selection clipboard"
 fi
 paste() {
   a=$(cat)
