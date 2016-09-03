@@ -74,6 +74,14 @@ info () {
   wc -c "$1"
 }
 
+# Print absolute path given a filename
+fp () {
+  case "$1" in
+    /*) printf '%s\n' "$1";;
+    *) printf '%s\n' "$PWD/$1";;
+  esac
+}
+
 ##
 # Git
 ##
