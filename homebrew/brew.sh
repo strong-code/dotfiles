@@ -31,6 +31,7 @@ brew install git
 brew install task
 brew install taskd
 brew install tasksh
+brew install lastpass-cli --with-pinentry
 
 # Clean up
 echo Done! Cleaning up...
