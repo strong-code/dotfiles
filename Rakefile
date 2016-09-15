@@ -20,7 +20,7 @@ task :install, [:all] do |_, args|
     "Irssi config" => Proc.new { install_irssi },
     "Vim" => Proc.new { install_vim },
     "Atom" => Proc.new { install_atom },
-    "TaskMaster" => Proc.new { install_taskmaster }
+    "Secrets file" => Proc.new { install_credentials }
   }
 
   begin
@@ -134,11 +134,13 @@ def install_atom
  make_symlink("atom/config.cson", "~/.atom/config.cson", true)
  make_symlink("atom/keymap.cson", "~/.atom/keymap.cson", true)
  make_symlink("atom/styles.less", "~/.atom/styles.less", true)
+ puts "Done!"
 end
 
-def install_taskmaster
-  make_symlink("task/.task", "~/.task", true)
-  make_symlink("task/.taskrc", "~/.taskrc", true)
+def install_credentials
+  system("touch ~/.chl")
+  system("echo \"export SUP_UUID=get UUID from lpass and place here\" >> ~/.chl")
+  puts "Done!"
 end
 
 # Shell out to interactive prompt for shell installations
@@ -178,4 +180,5 @@ def success_message
   puts "Installation complete! Please restart your terminal for changes to take effect."
   puts "1. Remember to add ssh keys to your server, github and other services as needed"
   puts "2. Remember to import Terminal settings (located in osx/chl.terminal)"
+  puts "3. Remember to add credential values to ~/.chl"
 end

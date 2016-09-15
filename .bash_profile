@@ -4,8 +4,8 @@
 
 # Source .bashrc on login shells
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
-# Export ~/.profile for RVM assistance
-if [ -f ~/.profile ]; then . ~/.profile; fi
+# Export credentials file
+if [ -f ~/.chl ]; then . ~/.chl; fi
 # Source git-prompt script
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWSTASHSTATE=1 # Shows indicator if branch contains stashes
@@ -174,11 +174,11 @@ alias reload="source ~/.bash_profile"
 # If we're not on osx, alias paste to xclip utlity
 if [ "$(uname)" == "Darwin" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$(lpass show --notes paste_uuid) http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/data/"$0}' | tee /dev/tty | pbcopy
+    curl -s -F file=@"$1" -F uuid=chl:$SUP_UUID http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/data/"$0}' | tee /dev/tty | pbcopy
   }
 elif [ "$(uname)" == "Linux" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$(lpass show --notes paste_uuid) http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/data/"$0}'
+    curl -s -F file=@"$1" -F uuid=chl:$SUP_UUID http://paste.strongco.de/documents | awk -F '"' '{print "http://paste.strongco.de/data/"$0}'
   }
 fi
 
