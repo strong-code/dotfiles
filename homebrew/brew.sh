@@ -28,10 +28,7 @@ echo Done! Installing development applications...
 brew cask install --appdir="/Applications" atom
 brew install postgresql
 brew install git
-brew install task
-brew install taskd
-brew install tasksh
-brew install lastpass-cli --with-pinentry
+brew install jq
 
 # Clean up
 echo Done! Cleaning up...
