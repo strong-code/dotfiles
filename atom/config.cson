@@ -17,6 +17,12 @@
   minimap: {}
   "one-light-ui":
     layoutMode: "Compact"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "tree-view": {}
   welcome:
     showOnStartup: false
