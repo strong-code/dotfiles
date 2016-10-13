@@ -1,6 +1,7 @@
 "*":
   core:
     openEmptyEditorOnStart: false
+    telemetryConsent: "no"
   "custom-title":
     template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
