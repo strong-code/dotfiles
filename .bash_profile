@@ -212,3 +212,4 @@ npm () {
 
 # Add chef path export
 export PATH=/opt/chefdk/bin:$PATH
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
