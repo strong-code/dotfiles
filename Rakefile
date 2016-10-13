@@ -138,8 +138,7 @@ def install_atom
 end
 
 def install_credentials
-  system("touch ~/.chl")
-  system("echo \"export SUP_UUID=get UUID from lpass and place here\" >> ~/.chl")
+  system("cp .example.chl ~/.chl")
   puts "Done!"
 end
 

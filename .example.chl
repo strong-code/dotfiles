@@ -1,0 +1,3 @@
+# This is a secrets file for all services
+
+export STRONGCODE_API_KEY=1234567890abcdefg

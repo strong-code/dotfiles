@@ -174,11 +174,11 @@ alias reload="source ~/.bash_profile"
 # If we're not on osx, alias paste to xclip utlity
 if [ "$(uname)" == "Darwin" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$SUP_UUID http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}' | tee /dev/tty | pbcopy
+    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}' | tee /dev/tty | pbcopy
   }
 elif [ "$(uname)" == "Linux" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$SUP_UUID http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}'
+    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}'
   }
 fi
 
@@ -210,6 +210,14 @@ npm () {
   npm "$@"
 }
 
+note () {
+  curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$1" http://strongco.de/journal_entries.json
+  echo ""
+}
+
 # Add chef path export
 export PATH=/opt/chefdk/bin:$PATH
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# Additional export for rbenv on ubuntu
+if [ "$(uname)" == "Linux" ]; then
+  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+fi
