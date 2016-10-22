@@ -211,7 +211,10 @@ npm () {
 }
 
 note () {
-  curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$1" http://strongco.de/journal_entries.json
+  vim -c 'startinsert' ~/.tempnote
+  entry=$(cat ~/.tempnote)
+  curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$entry" http://strongco.de/journal_entries.json
+  rm ~/.tempnote
   echo ""
 }
 
