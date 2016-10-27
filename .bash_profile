@@ -174,11 +174,11 @@ alias reload="source ~/.bash_profile"
 # If we're not on osx, alias paste to xclip utlity
 if [ "$(uname)" == "Darwin" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}' | tee /dev/tty | pbcopy
+    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media | tee /dev/tty | pbcopy
   }
 elif [ "$(uname)" == "Linux" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}'
+    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media
   }
 fi
 
