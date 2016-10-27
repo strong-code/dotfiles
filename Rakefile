@@ -10,7 +10,7 @@ task :install, [:all] do |_, args|
 
   modules = {
     "System fonts" => Proc.new { install_fonts },
-    "Ruby and RVM" => Proc.new { install_ruby },
+    "Ruby and rbenv" => Proc.new { install_ruby },
     "Bash config" => Proc.new { install_bash },
     "NVM" => Proc.new { install_nvm },
     "Homebrew config" => Proc.new { install_homebrew },
