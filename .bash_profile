@@ -174,11 +174,11 @@ alias reload="source ~/.bash_profile"
 # If we're not on osx, alias paste to xclip utlity
 if [ "$(uname)" == "Darwin" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}' | tee /dev/tty | pbcopy
+    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media | tee /dev/tty | pbcopy
   }
 elif [ "$(uname)" == "Linux" ]; then
   paste() {
-    curl -s -F file=@"$1" -F uuid=chl:$STRONGCODE_API_KEY http://up.strongco.de/up | awk -F '"' '{print "http://up.strongco.de/d/"$0}'
+    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media
   }
 fi
 
@@ -211,7 +211,14 @@ npm () {
 }
 
 note () {
-  curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$1" http://strongco.de/journal_entries.json
+  if [[ $1 == "-v" ]]; then
+    vim -c 'startinsert' ~/.tempnote
+    entry=$(cat ~/.tempnote)
+    curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$entry" http://strongco.de/journal_entries.json
+    rm ~/.tempnote
+  else
+    curl -H "Authorization: Token token=$STRONGCODE_API_KEY" -d "journal_entry[text]=$1" http://strongco.de/journal_entries.json
+  fi
   echo ""
 }
 
