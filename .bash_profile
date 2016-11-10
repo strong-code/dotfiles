@@ -137,6 +137,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 alias ri="rake install"
+alias rake="bundle exec rake"
 
 ##
 # Screen
