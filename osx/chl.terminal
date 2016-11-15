@@ -153,10 +153,6 @@
 			<key>ProcessName</key>
 			<string>tmux</string>
 		</dict>
-		<dict>
-			<key>ProcessName</key>
-			<string>ssh</string>
-		</dict>
 	</array>
 	<key>shellExitAction</key>
 	<integer>1</integer>
