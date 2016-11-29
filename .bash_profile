@@ -229,3 +229,6 @@ export PATH=/opt/chefdk/bin:$PATH
 if [ "$(uname)" == "Linux" ]; then
   export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 fi
+
+# Add miscellaneous scripts to path
+export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
