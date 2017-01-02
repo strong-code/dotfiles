@@ -232,5 +232,3 @@ fi
 
 # Add miscellaneous scripts to path
 export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
-export VAULT_SKIP_VERIFY=true 
-export VAULT_AUTH_GITHUB_TOKEN='4cf78ea88436c2b32a9fcb0a3dc09eb74fe78fc1'
