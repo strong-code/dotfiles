@@ -7,3 +7,7 @@ Host chl
   ServerAliveInterval 120
   ServerAliveCountMax 30
   UseRoaming no
+
+Host postify
+  User postify
+  HostName ec2-35-162-99-89.us-west-2.compute.amazonaws.com
