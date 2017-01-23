@@ -20,7 +20,7 @@ Servers = (
 );
 
 chatnets = {
-  Rizon = {
+  Rizon = { 
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
@@ -38,10 +38,10 @@ chatnets = {
 
 channels = (
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#botto-test"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "#skyrealm"; chatnet = "Rizon"; autojoin = "Yes"; }
-  { name = "#buddy"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#skyrealm"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#buddy"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -227,9 +227,7 @@ settings = {
     hilight_color = "%_%M";
     hilight_act_color = "%_%W";
   };
-  "irc/dcc" = {
-    dcc_autoget_masks = "pondering";
-  };
+  "irc/dcc" = { dcc_autoget_masks = "pondering"; };
 };
 logs = { };
 ignores = (
@@ -245,3 +243,57 @@ hilights = (
   { text = "BradPitt"; nick = "yes"; word = "no"; line = "no"; },
   { text = "BraddPitt"; nick = "yes"; word = "no"; line = "no"; }
 );
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ruby";
+        tag = "Freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rubyonrails";
+        tag = "Freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#botto-test";
+        tag = "Rizon";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#skyrealm";
+        tag = "Rizon";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#buddy";
+        tag = "Rizon";
+      }
+    );
+  };
+};
+mainwindows = { 6 = { first_line = "1"; lines = "67"; }; };
