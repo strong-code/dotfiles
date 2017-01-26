@@ -36,8 +36,9 @@ chatnets = {
   };
 };
 
-channels = ( 
-  { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; }
+channels = (
+  { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#botto"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
