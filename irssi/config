@@ -36,7 +36,7 @@ chatnets = {
   };
 };
 
-channels = (
+channels = ( 
   { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
@@ -204,11 +204,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Hunte";
-    user_name = "Hunte";
-    nick = "hunte";
-  };
+  core = { real_name = "Hunte"; user_name = "Hunte"; nick = "hunte"; };
   "fe-text" = {
     actlist_sort = "refnum";
     scrollback_time = "7days ";
@@ -228,6 +224,7 @@ settings = {
 logs = { };
 ignores = (
   { mask = "list"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ): }
+  { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); }
 );
 completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
+hilights = ( { text = "hunte"; nick = "yes"; word = "yes"; } );
