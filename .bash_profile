@@ -190,6 +190,10 @@ myip () {
   echo "$PUB_IP"
 }
 
+# Get process for given port
+port () {
+  lsof -i:$1
+}
 nvm () {
   unset -f nvm
   export NVM_DIR="$HOME/.nvm"
