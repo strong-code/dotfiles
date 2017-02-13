@@ -1,0 +1,45 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias code="cd ~/Documents/code/" # Shortcut to main 'code' dir
+alias desk="cd ~/Desktop" # Shortcut to desktop
+
+# Git
+alias ga="git add -A"
+alias gs="git status -sb"
+alias gc="git commit -m"
+alias gp="git pull"
+alias gpo="git push origin"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gwd="git diff --word-diff"
+alias gb="git branch"
+alias gch="git checkout"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias gstc="git stash clear"
+alias gstls="git stash list"
+
+# Ruby
+
+alias ri="rake install"
+alias rake="bundle exec rake"
+
+# Screen
+alias srd="screen -rd"
+alias slist="screen -ls"
+
+# IRC
+# Log in to server and start irssi named screen session with named terminal tab
+alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -x -t chl 'screen -d -r irc; bash -l'"
+
+# Second irssi login for :^) reasons
+alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -t chl 'screen -d -r sicp; bash -l'"
+
+# Misc
+
+alias ls="ls -FlAhp"
+alias c="clear"
+alias reload="source ~/.bash_profile"
