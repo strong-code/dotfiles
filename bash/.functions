@@ -99,3 +99,16 @@ note () {
   fi
   echo ""
 }
+
+# git merge master into current branch
+gmm () {
+  CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  if [ $CURRENT_BRANCH == "master" ]; then
+    echo "Already on master branch"
+  else
+    git checkout master
+    git pull
+    git checkout $CURRENT_BRANCH
+    git merge master
+  fi
+}
