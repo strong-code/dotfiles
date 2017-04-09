@@ -112,3 +112,9 @@ gmm () {
     git merge master
   fi
 }
+
+# Rename a file
+rename() {
+  DIR=$(dirname $1)
+  mv $1 $DIR/$2
+}
