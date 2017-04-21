@@ -19,6 +19,10 @@ UsePrivilegeSeparation yes
 KeyRegenerationInterval 3600
 ServerKeyBits 1024
 
+# Allow TCP forwarding to prevent error spam in STDOUT with -D while tunneling
+AllowTCPForwarding yes
+PermitOpen any
+
 # Logging
 SyslogFacility AUTH
 LogLevel INFO
