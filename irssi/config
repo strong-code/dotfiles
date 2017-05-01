@@ -20,7 +20,7 @@ Servers = (
 );
 
 chatnets = {
-  Rizon = { 
+  Rizon = {
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
@@ -228,4 +228,4 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); }
 );
 completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
-hilights = ( { text = "hunte"; nick = "yes"; word = "yes"; } );
+hilights = ( { text = "tespl"; nick = "yes"; word = "yes"; } );
