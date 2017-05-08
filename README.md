@@ -10,3 +10,5 @@ Install with
     $ rm /Users/chl/Library/Preferences/com.apple.Terminal.plist
 
 Then restore from /osx/chl.terminal -> manual import
+
+Helpful stuff in [snippets.md](./snippets.md)
