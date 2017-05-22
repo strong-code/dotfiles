@@ -29,6 +29,7 @@ brew cask install --appdir="/Applications" atom
 brew install postgresql
 brew install git
 brew install jq
+brew install diff-so-fancy
 
 # Clean up
 echo Done! Cleaning up...
