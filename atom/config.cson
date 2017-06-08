@@ -2,6 +2,10 @@
   core:
     openEmptyEditorOnStart: false
     telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
   "custom-title":
     template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
