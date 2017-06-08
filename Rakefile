@@ -127,13 +127,12 @@ end
 
 def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
+  make_symlink("vim/.nord.vim", "~/.vim/colors/nord.vim")
   puts "Done!"
 end
 
 def install_atom
- make_symlink("atom/config.cson", "~/.atom/config.cson", true)
- make_symlink("atom/keymap.cson", "~/.atom/keymap.cson", true)
- make_symlink("atom/styles.less", "~/.atom/styles.less", true)
+ make_symlink("atom", "~/.atom", true)
  puts "Done!"
 end
 
