@@ -196,10 +196,6 @@ statusbar = {
       position = "0";
       visible = "never";
       items = {
-        topicbarstart = { priority = "100"; };
-        topic = { };
-        topic_empty = { };
-        topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
   };
