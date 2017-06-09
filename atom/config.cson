@@ -7,7 +7,7 @@
       "nord-atom-syntax"
     ]
   "custom-title":
-    template: "<% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
+    template: "<%= projectName %> <% if (gitHead) { %> [<%= gitHead %>]<% } %> - <%= relativeFilePath %>"
   editor:
     autoIndentOnPaste: false
     fontFamily: "mononoki"
