@@ -13,6 +13,8 @@ C_BBLACK="\[\e[1;90m\]"
 C_BGREEN="\[\e[1;92m\]"
 C_BPURPLE="\[\e[1;95m\]"
 C_PURPLE="\[\e[0;35m\]"
+C_YELLOW="\[\e[1;33m\]"
+C_RED="\[\e[0;31m\]"
 
 # Don't log history if command begins with space
 export HISTIGNORE="[ \t]*"

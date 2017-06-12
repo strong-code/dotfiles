@@ -10,7 +10,7 @@ if [ -f ~/.chl ]; then . ~/.chl; fi
 
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
-  export PS1="$C_BCYAN[SSH] \u @ \w$C_BLUE$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
+  export PS1="$C_RED[SSH] \u @ \w$C_BLUE\$(__git_ps1) ⤳  $C_DEFAULT"
 else # normal shell prompt
-  export PS1="$C_BLUE\u @ \w$C_BCYAN$C_BOLD\$(__git_ps1) ⤳  $C_DEFAULT"
+  export PS1="$C_BLUE\u @ \w$C_RED\$(__git_ps1) ⤳  $C_DEFAULT"
 fi
