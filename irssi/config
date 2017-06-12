@@ -109,20 +109,20 @@ statusbar = {
 
     # treated "normally", you could change the time/user name to whatever
     time = "";
-    user = "%_%C[$tag] $itemname";
+    user = "%_%B[$tag] $itemname";
 
     # treated specially .. window is printed with non-empty windows,
     # window_empty is printed with empty windows
     window = "{sb }";
     window_empty = "{sb }";
-    prompt = "%9$N %C⤳  ";
-    prompt_empty = "$N %9%C⤳  ";
+    prompt = "%_%B$N %R⤳  ";
+    prompt_empty = "$N %_%B%R⤳  ";
     topic = " $topic";
     topic_empty = "";
 
     # all of these treated specially, they're only displayed when needed
     lag = "(Lag: $0-)";
-    act = "{sb %C$0-}";
+    act = "{sb %B$0-}";
     more = "-- more --";
   };
 
