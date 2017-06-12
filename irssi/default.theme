@@ -118,7 +118,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%M$0%n$1-%M:%n %|";
+  msgnick = "%C$0%n$1-%C:%n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -142,11 +142,11 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
-  pubnick = "%N$*%n";
+  pubnick = "$*";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
-  menick = "%M%_$*";
+  menick = "%B%_$*";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
@@ -173,7 +173,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%M* $*%M";
+  action_core = "%C* $*%C";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
