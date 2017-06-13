@@ -63,7 +63,7 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%M#%n ";
+  line_start = "#%n ";
 
   # timestamp styling, nothing by default
   timestamp = "$*";
@@ -201,9 +201,9 @@ abstracts = {
 
   # notices
   ownnotice = "[%r$0%K(%R$1-%K)]%n ";
-  notice = "%K-%M$*%K-%n ";
-  pubnotice_channel = "%K:%m$*";
-  pvtnotice_host = "%K(%m$*%K)";
+  notice = "%K-$*%K-%n ";
+  pubnotice_channel = "%K:%c$*";
+  pvtnotice_host = "%K(%c$*%K)";
   servernotice = "%g!$*%n ";
 
   # CTCPs
@@ -221,12 +221,12 @@ abstracts = {
 
   # /names list
   names_prefix = "";
-  names_nick = "[%M%_$0%n$1-] ";
+  names_nick = "[%C%_$0%n$1-] ";
   names_nick_op = "{names_nick $*}";
   names_nick_halfop = "{names_nick $*}";
   names_nick_voice = "{names_nick $*}";
-  names_users = "[%_%C$*%n]";
-  names_channel = "%M$*%n";
+  names_users = "[%_%B$*%n]";
+  names_channel = "$*%n";
 
   # DCC
   dcc = "%g$*%n";
@@ -256,7 +256,7 @@ abstracts = {
   #sb_default_bg = "%z585E5A";
   sb_default_bg = "%K";
   # background for prompt / input line
-  sb_prompt_bg = "%M";
+  sb_prompt_bg = "%B";
   # background for info statusbar
   sb_info_bg = "%8";
   # background for topicbar (same default)
