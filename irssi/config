@@ -213,7 +213,7 @@ settings = {
     completion_strict = "no";
     autolog_path = "~/irclogs/$tag/$0/%Y/%m/%d.log";
     autolog_ignore_targets = "NickServ ChanServ HostServ";
-    hilight_color = "%_↪ %B";
+    hilight_color = "%_↪ %R";
     hilight_act_color = "%_%W";
   };
   "irc/dcc" = { dcc_autoget_masks = "pondering"; };
