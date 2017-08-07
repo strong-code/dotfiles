@@ -41,6 +41,6 @@ alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -t chl 'screen -d -r
 
 # Misc
 
-alias ls="ls -FlAhp"
+alias ls="ls -FlAhpG"
 alias c="clear"
 alias reload="source ~/.bash_profile"
