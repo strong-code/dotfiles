@@ -39,8 +39,10 @@ alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -x -t chl 'screen -d -r i
 # Second irssi login for :^) reasons
 alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -t chl 'screen -d -r sicp; bash -l'"
 
-# Misc
+# Lynx alias
+alias lynx="echo -ne \"\033]0;LYNX\007\" && clear && ssh -x -t chl 'screen -d -r lynx; bash -l'"
 
+# Misc
 alias ls="ls -FlAhpG"
 alias c="clear"
 alias reload="source ~/.bash_profile"
