@@ -60,7 +60,7 @@ fi
 # Get public-facing IP
 myip () {
   PUB_IP=$(curl -s ipecho.net/plain)
-  echo "$PUB_IP"
+  echo "$PUB_IP" | tee >(pbcopy)
 }
 
 # Get process for given port
