@@ -40,10 +40,7 @@ gsts () {
 }
 
 gch () {
-  if [ ! -z "$1" ];
-  then
-    git checkout $1
-  fi
+  git checkout "$@"
 }
 
 # Kill screen session by ID or name
