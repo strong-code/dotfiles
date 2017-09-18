@@ -27,6 +27,9 @@ alias gstls="git stash list"
 alias ri="rake install"
 alias rake="bundle exec rake"
 
+# Berks
+alias bi="berks install"
+
 # Screen
 alias srd="screen -rd"
 alias slist="screen -ls"
