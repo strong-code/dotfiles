@@ -20,7 +20,7 @@ Servers = (
 );
 
 chatnets = {
-  Rizon = {
+  Rizon = { 
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
@@ -195,13 +195,12 @@ statusbar = {
       placement = "top";
       position = "0";
       visible = "never";
-      items = {
-      };
+      items = { };
     };
   };
 };
 settings = {
-  core = { real_name = "Hunte"; user_name = "Hunte"; nick = "hunte"; };
+  core = { real_name = "1800HENTAI"; user_name = "1800HENTAI"; nick = "HENTAIxHOTLINE"; };
   "fe-text" = {
     actlist_sort = "refnum";
     scrollback_time = "7days ";
@@ -225,3 +224,25 @@ ignores = (
 );
 completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
 hilights = ( { text = "tespl"; nick = "yes"; word = "yes"; } );
+notifies = {
+  "#/g/sicp" = {
+    ircnets = (
+      "greentea",
+      "1.0",
+      "is",
+      "now",
+      "DEPRECATED.",
+      "Please",
+      "update",
+      "all",
+      "references",
+      "to",
+      "greentea",
+      "1.1",
+      "RC",
+      "beta",
+      "pre-alpha",
+      "release"
+    );
+  };
+};
