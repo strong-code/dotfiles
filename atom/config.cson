@@ -11,7 +11,7 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "mononoki"
-    fontSize: 15
+    fontSize: 16
     invisibles:
       tab: " "
     showIndentGuide: true
