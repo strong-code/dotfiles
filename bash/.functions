@@ -63,7 +63,12 @@ fi
 # Get public-facing IP
 myip () {
   PUB_IP=$(curl -s ipecho.net/plain)
-  echo "$PUB_IP" | tee >(pbcopy)
+
+  if [ "$(uname)" == "Linux" ]; then
+    echo "$PUB_IP"
+  elsif [ "$(uname)" == "Darwin" ]; then
+    echo "$PUB_IP" | tee >(pbcopy)
+  fi
 }
 
 # Get process for given port
