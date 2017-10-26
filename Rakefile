@@ -20,7 +20,8 @@ task :install, [:all] do |_, args|
     "Irssi config" => Proc.new { install_irssi },
     "Vim" => Proc.new { install_vim },
     "Atom" => Proc.new { install_atom },
-    "Secrets file" => Proc.new { install_credentials }
+    "Secrets file" => Proc.new { install_credentials },
+    "Tmux" => Proc.new { install_tmux }
   }
 
   begin
@@ -41,6 +42,19 @@ task :install, [:all] do |_, args|
 end
 
 private
+
+def install_tmux
+  puts "Installing tmux..."
+  if osx?
+    system("brew install tmux")
+  else
+    system("apt-get install tmux -y")
+  end
+  
+  puts "Linking tmux config..."
+  make_symlink("tmux/", "~/.tmux")
+  puts "Done"
+end
 
 def install_fonts
   if (!osx?)
