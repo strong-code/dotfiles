@@ -84,3 +84,6 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 # Set primary, secondary and tertiary DNS servers
 # (NTT-2, Global Crossing Phoenix-2, Covad snfccasy)
 networksetup -setdnsservers Wi-Fi 129.250.35.251 206.165.6.12 67.100.88.27
+
+# Unbind cmd+Q for closing Terminal.app
+defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Quit Terminal" nil
