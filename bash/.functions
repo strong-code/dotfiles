@@ -102,13 +102,12 @@ gmm () {
 }
 
 # Rename a file
-rename() {
+rename () {
   DIR=$(dirname $1)
   mv $1 $DIR/$2
 }
 
-
 # Remove host from ~/.ssh/known_hosts
-rmhost() {
+rmhost () {
   ssh-keygen -R $1
 }

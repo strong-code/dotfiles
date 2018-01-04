@@ -42,7 +42,7 @@ alias irc="echo -ne \"\033]0;IRC\007\" && clear && ssh -x -t chl 'screen -d -r i
 alias sicp="echo -ne \"\033]0;SICP\007\" && clear && ssh -x -t chl 'screen -d -r sicp; bash -l'"
 
 # Lynx alias
-alias lynx="echo -ne \"\033]0;LYNX\007\" && clear && ssh -x -t chl 'screen -d -r lynx; bash -l'"
+alias rlynx="echo -ne \"\033]0;LYNX\007\" && clear && ssh -x -t chl 'screen -d -r lynx; bash -l'"
 
 # Misc
 alias ls="ls -FlAhpG"
