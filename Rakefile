@@ -50,7 +50,7 @@ def install_tmux
   else
     system("apt-get install tmux -y")
   end
-  
+
   puts "Linking tmux config..."
   make_symlink("tmux/", "~/.tmux")
   puts "Done"
