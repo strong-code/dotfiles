@@ -24,12 +24,4 @@ nvm alias default node
 
 apt-get install npm -y
 
-echo "Done! Installing shadowsocks server..."
-if [[ $(python --version) ]]; then
-  pip install shadowsocks
-  echo "Shadowsocks installed"
-else
-  echo "No python installation found! Install python and then install shadowsocks server"
-fi
-
 echo "Finished!"

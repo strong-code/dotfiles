@@ -111,3 +111,13 @@ rename () {
 rmhost () {
   ssh-keygen -R $1
 }
+
+# Open SOCKS proxy on chl server port 8080
+soxprox () {
+  ssh -D 8080 -C -N -f -q chl
+  if [ $? -eq 0 ]; then
+    echo "SOCKS proxy opened on port 8080"
+  else
+    echo "Error opening proxy on port 8080"
+  fi
+}
