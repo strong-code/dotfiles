@@ -18,7 +18,7 @@ execute.throw = bash, -c, (cat,\
     "&& mkdir -p .session download log watch/{load,start}")
 
 # Listening port for incoming peer traffic (fixed; you can also randomize it)
-network.port_range.set = 50000-50000
+network.port_range.set = 9876-9876
 network.port_random.set = no
 
 # Tracker-less torrent and UDP tracker support
