@@ -13,6 +13,7 @@ task :install, [:all] do |_, args|
     "Ruby and rbenv" => Proc.new { install_ruby },
     "Bash config" => Proc.new { install_bash },
     "NVM" => Proc.new { install_nvm },
+    "GVM" => Proc.new { install_gvm },
     "Homebrew config" => Proc.new { install_homebrew },
     "OSX sytem config" => Proc.new { install_osx },
     "Git config" => Proc.new { install_git },
@@ -142,6 +143,11 @@ end
 def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
   make_symlink("vim/.nord.vim", "~/.vim/colors/nord.vim")
+  puts "Done!"
+end
+
+def install_gvm
+  shell_out("bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)")
   puts "Done!"
 end
 
