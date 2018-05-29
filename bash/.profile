@@ -53,3 +53,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go stuff
 [[ -s "/Users/chl/.gvm/scripts/gvm" ]] && source "/Users/chl/.gvm/scripts/gvm"
+export GOROOT_BOOTSTRAP=$GOROOT
