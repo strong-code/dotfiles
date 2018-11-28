@@ -29,6 +29,9 @@ if [ ! -d ~/rtorrent ]; then
   mkdir ~/rtorrent
 fi
 
-ln -s ~/Documents/code/dotfile/server/.rtorrent.rc ~/.rtorrent.rc
+ln -s ~/Documents/code/dotfiles/server/.rtorrent.rc ~/.rtorrent.rc
+
+echo "Linking Nginx site configs..."
+ln -s ~/Documents/code/dotfiles/server/sites-enabled /etc/nginx/
 
 echo "Finished!"
