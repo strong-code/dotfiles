@@ -1,0 +1,13 @@
+server {
+    listen 80;
+    server_name strongco.de;
+    client_max_body_size 20M;
+
+    location / {
+      proxy_pass http://localhost:3000;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Scheme $scheme;
+    }
+}
+
