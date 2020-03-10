@@ -26,6 +26,7 @@ brew cask install --appdir="/Applications" lastfm
 # Install development apps
 echo Done! Installing development applications...
 brew cask install --appdir="/Applications" atom
+brew cask install docker
 brew install postgresql
 brew install git
 brew install jq
