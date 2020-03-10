@@ -61,7 +61,7 @@
   "dependencies": {},
   "description": "An arctic, north-bluish clean and elegant Atom syntax theme.",
   "devDependencies": {
-    "eslint": "3.15.0",
+    "eslint": ">=4.18.12",
     "gulp": "3.9.1",
     "gulp-eslint": "3.0.1",
     "gulp-help": "1.6.1",
