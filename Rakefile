@@ -18,7 +18,6 @@ task :install, [:all] do |_, args|
     "OSX sytem config" => Proc.new { install_osx },
     "Git config" => Proc.new { install_git },
     "SSH config" => Proc.new { install_ssh },
-    "Irssi config" => Proc.new { install_irssi },
     "Vim" => Proc.new { install_vim },
     "Atom" => Proc.new { install_atom },
     "Secrets file" => Proc.new { install_credentials },
@@ -125,12 +124,6 @@ end
 def install_ssh
   system("mkdir ~/.ssh") if !Dir.exist?(File.expand_path("~/.ssh"))
   make_symlink("ssh/.config", "~/.ssh/config")
-  puts "Done!"
-end
-
-def install_irssi
-  system("mkdir -p ~/.irssi") if !Dir.exist?(File.expand_path("~/.irssi"))
-  make_symlink("irssi/config", "~/.irssi/config")
   puts "Done!"
 end
 
