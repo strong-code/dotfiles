@@ -77,7 +77,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock autohide -bool true
 
 # Set fastest key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write -g KeyRepeat -int 2
 defaults write -g InitialKeyRepeat -int 15
 
 # Set top left hot corner to display sleep
