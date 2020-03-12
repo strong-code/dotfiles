@@ -12,10 +12,6 @@ brew install caskroom/cask/brew-cask
 echo Done! Upgrading existing applications and utilities...
 brew upgrade --all
 
-# Install basic utilities
-echo Done! Installing irssi IRC client...
-brew install irssi
-
 # Install basic apps
 echo Done! Installing applications...
 brew cask install --appdir="/Applications" google-chrome
