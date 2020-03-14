@@ -26,6 +26,7 @@ brew install postgresql
 brew install git
 brew install jq
 brew install diff-so-fancy
+brew install rbenv
 
 # Clean up
 echo Done! Cleaning up...
