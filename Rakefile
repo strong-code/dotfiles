@@ -122,7 +122,7 @@ def install_git
 end
 
 def install_ssh
-  system("mkdir ~/.ssh") if !Dir.exist?(File.expand_path("~/.ssh"))
+  system("mkdir ~/.ssh") unless Dir.exist?(File.expand_path("~/.ssh"))
   make_symlink("ssh/.config", "~/.ssh/config")
   puts "Done!"
 end
@@ -135,6 +135,7 @@ end
 
 def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
+  system("mkdir -p ~/.vim/colors/") unless Dir.exist?(File.expand_path("~/.vim/colors/"))
   make_symlink("vim/.nord.vim", "~/.vim/colors/nord.vim")
   puts "Done!"
 end
