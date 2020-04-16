@@ -2,7 +2,3 @@
 
 # Strongco.de API
 export STRONGCODE_API_KEY=1234567890abcdefg
-
-# Dox Vault token
-export VAULT_SKIP_VERIFY=true
-export VAULT_AUTH_GITHUB_TOKEN=aaaaaabbbbbbbccccc
