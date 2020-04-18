@@ -1,6 +1,0 @@
-A collection of important commands to practice or (re)learn
-
-### VISUAL MODE
-
-daw : delete the word under the cursor
-caw : delete the word under the cursor and enter insert mode
