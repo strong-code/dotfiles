@@ -13,10 +13,13 @@ echo Done! Upgrading existing applications and utilities...
 brew upgrade --all
 
 # Install basic apps
+# TODO: Clean this up
 echo Done! Installing applications...
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" lastfm
+brew cask install --appdir="/Applications" qbitorrent
+brew cask install --appdir="/Applications" vlc
 
 # Install development apps
 echo Done! Installing development applications...
