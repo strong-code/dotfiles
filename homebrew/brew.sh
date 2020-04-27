@@ -13,23 +13,20 @@ echo Done! Upgrading existing applications and utilities...
 brew upgrade --all
 
 # Install basic apps
-# TODO: Clean this up
-echo Done! Installing applications...
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" lastfm
-brew cask install --appdir="/Applications" qbitorrent
-brew cask install --appdir="/Applications" vlc
+echo Done! Installing user applications...
+declare -a apps=("google-chrome" "spotify" "lastfm" "qbitorrent" "vlc" "docker")
+for a in ${apps[*]}
+do
+  brew cask install --appdir="/Applications" $a
+done
 
 # Install development apps
 echo Done! Installing development applications...
-brew cask install --appdir="/Applications" atom
-brew cask install docker
-brew install postgresql
-brew install git
-brew install jq
-brew install diff-so-fancy
-brew install rbenv
+declare -a apps=("postgresql" "git" "jq" "diff-so-fancy" "rbenv")
+for a in ${apps[*]}
+do
+  brew install $a
+done
 
 # Clean up
 echo Done! Cleaning up...
