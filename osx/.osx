@@ -3,6 +3,15 @@
 # Set computer name and host (As done through System Preferences -> Sharing)
 sudo scutil --set ComputerName "chl-mbp"
 
+# Show only certain icon in menubar
+defaults write com.apple.systemuiserver menuExtras '
+(
+    "/System/Library/CoreServices/Menu Extras/Clock.menu",
+    "/System/Library/CoreServices/Menu Extras/Battery.menu",
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu",
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+)'
+
 # Set the only correct scroll direction there is in life
 defaults write -g com.apple.swipescrolldirection -bool FALSE
 
@@ -115,3 +124,6 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Show remaining battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
+
+# Restart SystemUIServer
+killall SystemUIServer
