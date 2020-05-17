@@ -11,3 +11,7 @@ Set up named screen, with colors:
 Set up named screen, with colors, for SICP mode:
 
     $ screen -T screen-256color -S sicp irssi --config=~/code/dotfiles/irssi/sicp_config
+    
+## DNS
+
+For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adguard-dns/overview.html#instruction )
