@@ -7,15 +7,6 @@ Servers = (
     use_ssl = "yes";
     ssl_verify = "no";
     autoconnect = "yes";
-  },
-  {
-    address = "chat.freenode.net";
-    chatnet = "Freenode";
-    port = "7070";
-    use_ssl = "yes";
-    ssl_verify = "yes";
-    ssl_capath = "/etc/ssl/certs";
-    autoconnect = "no";
   }
 );
 
@@ -26,19 +17,11 @@ chatnets = {
     max_msgs = "3";
     max_whois = "30";
   };
-
-  Freenode = {
-    type = "IRC";
-    nick = "strongcode";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
 };
 
 channels = (
-  { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "#botto"; chatnet = "Rizon"; autojoin = "Yes"; }
+  { name = "#/g/punk"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#homescreen"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -200,7 +183,7 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "1800HENTAI"; user_name = "1800HENTAI"; nick = "HENTAIxHOTLINE"; };
+  core = { real_name = "BradPitt"; user_name = "BradPitt"; nick = "BradPitt"; };
   "fe-text" = {
     actlist_sort = "refnum";
     scrollback_time = "7days ";
@@ -223,26 +206,5 @@ ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#/g/sicp" ); }
 );
 completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
-hilights = ( { text = "tespl"; nick = "yes"; word = "yes"; } );
-notifies = {
-  "#/g/sicp" = {
-    ircnets = (
-      "greentea",
-      "1.0",
-      "is",
-      "now",
-      "DEPRECATED.",
-      "Please",
-      "update",
-      "all",
-      "references",
-      "to",
-      "greentea",
-      "1.1",
-      "RC",
-      "beta",
-      "pre-alpha",
-      "release"
-    );
-  };
-};
+hilights = ( { text = "BradPitt"; nick = "yes"; word = "yes"; } );
+notifies = {};
