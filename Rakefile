@@ -123,7 +123,8 @@ end
 
 def install_ssh
   system("mkdir ~/.ssh") unless Dir.exist?(File.expand_path("~/.ssh"))
-  make_symlink("ssh/.config", "~/.ssh/config")
+  make_symlink("ssh/config", "~/.ssh/config")
+  system("chmod 600 ~/.ssh/config")
   puts "Done!"
 end
 
