@@ -137,7 +137,7 @@ end
 def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
   system("mkdir -p ~/.vim/colors/") unless Dir.exist?(File.expand_path("~/.vim/colors/"))
-  make_symlink("vim/.nord.vim", "~/.vim/colors/nord.vim")
+  make_symlink("vim/nord.vim", "~/.vim/colors/nord.vim")
   puts "Done!"
 end
 
