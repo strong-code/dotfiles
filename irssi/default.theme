@@ -274,7 +274,7 @@ abstracts = {
 
   prompt = "[$*] ";
 
-  sb = " %C[%n$*%C]%n";
+  sb = " %b[%n$*%b]%n";
   sbmode = "(%c+%n$*)";
   sbaway = " (%GzZzZ%n)";
   sbservertag = ":$0 (change with ^X)";
@@ -283,13 +283,13 @@ abstracts = {
   # activity in statusbar
 
   # ',' separator
-  sb_act_sep = "%C$*";
+  sb_act_sep = "%b$*";
   # normal text
-  sb_act_text = "%G$*";
+  sb_act_text = "%n$*";
   # public message
-  sb_act_msg = "%C$*";
+  sb_act_msg = "%b$*";
   # hilight
-  sb_act_hilight = "%9%W$*%9";
+  sb_act_hilight = "%r$*";
   # hilight with specified color, $0 = color, $1 = text
-  sb_act_hilight_color = "$0$1-%n";
+  sb_act_hilight_color = "%r$1-%n";
 };
