@@ -32,6 +32,7 @@ alias bi="berks install"
 
 # Tmux
 alias ta="tmux a -t"
+alias tkill="tmux kill-sess -t"
 alias tls="tmux ls"
 
 # IRC
