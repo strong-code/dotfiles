@@ -21,6 +21,9 @@ ln -s ~/Documents/code/dotfiles/server/authorized_keys ~/.ssh/authorized_keys
 rm /var/spool/cron/crontab/root
 ln -s ~/Documents/code/dotfiles/server/crontab /var/spool/cron/crontab/root
 
+echo "Linking irssi dir..."
+ln -s ~/Documents/code/dotfiles/irssi/ ~/.irssi
+
 # Download and install NVM, Node and NPM
 echo "Finished! Installing NVM, Node.js and NPM..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
