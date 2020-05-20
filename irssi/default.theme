@@ -78,7 +78,7 @@ abstracts = {
   channel = "%_$*%_";
 
   # nick is printed
-  nick = "%C%_$*%_";
+  nick = "%c$*";
 
   # nick host is printed
   nickhost = "[$*]";
@@ -118,7 +118,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%C$0%W$1-%C:%n %|";
+  msgnick = "%c$0%w$1-%c:%n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -138,7 +138,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%B$*%B";
+  ownnick = "%b$*%b";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
