@@ -1,3 +1,6 @@
+# Ignore ctrl+s stopping input
+stty -ixon
+
 BASH_SRC_PATH=~/Documents/code/dotfiles/bash
 
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
