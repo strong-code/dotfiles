@@ -24,6 +24,10 @@ ln -s ~/Documents/code/dotfiles/server/crontab /var/spool/cron/crontab/root
 echo "Linking irssi dir..."
 ln -s ~/Documents/code/dotfiles/irssi/ ~/.irssi
 
+echo "Linking tmux..."
+ln -s ~/Documents/code/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/Documents/code/dotfiles/tmux/.tmux/ ~/.tmux
+
 # Download and install NVM, Node and NPM
 echo "Finished! Installing NVM, Node.js and NPM..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
