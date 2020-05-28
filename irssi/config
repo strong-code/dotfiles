@@ -211,7 +211,10 @@ ignores = (
   { mask = "kekbot"; level = "ALL"; },
   { mask = "bobobobot"; level = "ALL"; }
 );
-completions = { gface = { value = "( ≖‿≖)"; auto = "yes"; }; };
+completions = {
+  gface = { value = "( ≖‿≖)"; auto = "yes"; };
+  wutface = { value = "'_`"; auto = "yes"; };
+};
 hilights = ( { text = "BradPitt"; nick = "yes"; word = "yes"; } );
 notifies = { };
 windows = {
