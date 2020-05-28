@@ -21,7 +21,8 @@ task :install, [:all] do |_, args|
     "Vim" => Proc.new { install_vim },
     "Atom" => Proc.new { install_atom },
     "Secrets file" => Proc.new { install_credentials },
-    "Tmux" => Proc.new { install_tmux }
+    "Tmux" => Proc.new { install_tmux },
+    "bin scripts" => Proc.new { install_bin }
   }
 
   begin
@@ -42,6 +43,12 @@ task :install, [:all] do |_, args|
 end
 
 private
+
+def install_bin
+  puts "Installing bin scripts in $HOME/bin/..."
+  make_symlink("bin/", "$HOME/bin")
+  puts "Done"
+end
 
 def install_tmux
   puts "Installing tmux..."
