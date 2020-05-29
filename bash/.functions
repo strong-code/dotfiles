@@ -43,23 +43,6 @@ gch () {
   git checkout "$@"
 }
 
-# Kill screen session by ID or name
-skill () {
-  screen -S "$1" -X quit
-}
-
-# Upload piped input to ix.io and copy resulting URL to clipboard
-# If we're not on osx, alias paste to xclip utlity
-if [ "$(uname)" == "Darwin" ]; then
-  paste() {
-    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media | tee /dev/tty | pbcopy
-  }
-elif [ "$(uname)" == "Linux" ]; then
-  paste() {
-    curl -s -F media=@"$1" -H "Authorization: Token token=$STRONGCODE_API_KEY" http://strongco.de/media
-  }
-fi
-
 # Get public-facing IP
 myip () {
   PUB_IP=$(curl -s ipecho.net/plain)
@@ -105,11 +88,6 @@ gmm () {
 rename () {
   DIR=$(dirname $1)
   mv $1 $DIR/$2
-}
-
-# Remove host from ~/.ssh/known_hosts
-rmhost () {
-  ssh-keygen -R $1
 }
 
 # Open SOCKS proxy on chl server port 8080
