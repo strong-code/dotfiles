@@ -151,7 +151,10 @@ module.exports = {
     // 'hyper-one-dark-vivid'
     'hyperterm-deep-space',
     'hyper-hover-header',
-    'hyper-hide-scroll'
+    'hyper-hide-scroll',
+    'hyperlinks',
+    'hyperterm-paste',
+    'hyper-tabs-enhanced'
   ],
 
   // in development, you can create a directory under

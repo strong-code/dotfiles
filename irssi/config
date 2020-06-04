@@ -20,8 +20,9 @@ chatnets = {
 };
 
 channels = (
+  { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; },
   { name = "#/g/punk"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "#homescreen"; chatnet = "Rizon"; autojoin = "Yes"; }
+  { name = "#pleb"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -220,31 +221,3 @@ completions = {
 };
 hilights = ( { text = "BradPitt"; nick = "yes"; word = "yes"; } );
 notifies = { };
-windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#/g/punk";
-        tag = "Rizon";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#homescreen";
-        tag = "Rizon";
-      }
-    );
-  };
-  4 = { name = "hilight"; sticky = "yes"; };
-};
-mainwindows = {
-  3 = { first_line = "7"; lines = "49"; };
-  4 = { first_line = "1"; lines = "6"; };
-};

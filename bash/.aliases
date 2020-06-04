@@ -23,12 +23,8 @@ alias gstc="git stash clear"
 alias gstls="git stash list"
 
 # Ruby
-
 alias ri="rake install"
 alias rake="bundle exec rake"
-
-# Berks
-alias bi="berks install"
 
 # Tmux
 alias ta="tmux a -t"
@@ -38,9 +34,6 @@ alias tls="tmux ls"
 # IRC
 # Log in to server and start irssi in tmux session with named terminal tab
 alias irc="echo -ne \"\033]0;IRC\007\" && ssh -x -t chl 'tmux a -t irc; bash -l'"
-
-# Lynx alias
-alias rlynx="echo -ne \"\033]0;LYNX\007\" && clear && ssh -x -t chl 'screen -d -r lynx; bash -l'"
 
 # Misc
 alias ls="ls -FlAhpG"

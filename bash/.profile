@@ -41,9 +41,6 @@ if [ "$(uname)" == "Linux" ]; then
   export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 fi
 
-# Add chef path export
-export PATH=/opt/chefdk/bin:$PATH
-
 # Add miscellaneous scripts to path
 export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
 
@@ -51,7 +48,3 @@ export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Go stuff
-[[ -s "/Users/chl/.gvm/scripts/gvm" ]] && source "/Users/chl/.gvm/scripts/gvm"
-export GOROOT_BOOTSTRAP=$GOROOT

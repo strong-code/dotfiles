@@ -1,0 +1,38 @@
+# !/bin/bash
+# Shell script to accept input (file or raw) and paste
+# to strongco.de/paste server, then copy paste URL to clipboard
+
+#SERVER_URL=strongco.de/paste
+SERVER_URL=localhost:3000/paste
+ECHO='false' # no echo on upload
+CLIP='true' # no clipboard pasting
+CLIP_CMD=""
+
+# Check if we are on WSL, native Linux or OSX
+set -e
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  CLIP_CMD="clip.exe" # WSL
+elif [ "$(uname -s)" == "Darwin" ]; then
+  CLIP_CMD="pbcopy" # OSX
+elif [ "$(uname -s)" == "Linux" ]; then
+  CLIP_CMD="xclip -selection c" # Linux
+fi
+
+while getopts ':e' 'OPTKEY'; do
+  case ${OPTKEY} in
+    'e') ECHO='true';;
+    'n') CLIP='false';;
+  esac
+done
+
+INPUT=$1
+
+P=$(curl -s -X POST -d '{"data": "'${1}'"}' -H "Content-Type: application/json" $SERVER_URL)
+
+if ${ECHO}; then
+  echo $P
+fi
+
+if ${CLIP}; then
+  echo $P | $CLIP_CMD
+fi
