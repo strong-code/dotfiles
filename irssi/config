@@ -210,11 +210,15 @@ ignores = (
   { mask = "list"; level = "ALL"; },
   { level = "JOINS PARTS QUITS"; },
   { mask = "kekbot"; level = "ALL"; },
-  { mask = "bobobobot"; level = "ALL"; }
+  { mask = "bobobobot"; level = "ALL"; },
+  { mask = "man3"; level = "ALL"; },
+  { mask = "manlet"; level = "ALL"; },
+  { mask = "Macbot"; level = "ALL"; }
 );
 completions = {
   gface = { value = "( ≖‿≖)"; auto = "yes"; };
   wutface = { value = "'_`"; auto = "yes"; };
+  kindface = { value = "( ´· ‿ ·`)"; auto = "yes"; };
 };
 hilights = ( { text = "BradPitt"; nick = "yes"; word = "yes"; } );
 notifies = { };
