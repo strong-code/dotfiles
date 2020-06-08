@@ -4,6 +4,8 @@ server {
 
         # home IP
         allow 136.24.33.164/24;
+        # parents house
+        allow 69.181.132.127;
         deny all;
 
         listen 80;
