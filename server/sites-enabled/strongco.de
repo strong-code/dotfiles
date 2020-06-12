@@ -2,8 +2,21 @@ server {
     listen 80;
     server_name strongco.de;
     client_max_body_size 20M;
+    set $cors "";
+
+    if ($http_origin ~* (start\.strongco.de)) {
+      set $cors "true";
+    }
 
     location / {
+
+      if ($cors = "true") {
+        add_header 'Access-Control-Allow-Origin' "$http_origin";
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, DELETE';
+        add_header 'Access-Control-Allow-Credentials' 'true';
+        add_header 'Access-Control-Allow-Headers' 'User-Agent,Keep-Alive,Content-Type';
+      }
+
       proxy_pass http://localhost:3000;
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP $remote_addr;
