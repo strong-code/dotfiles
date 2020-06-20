@@ -27,7 +27,7 @@ alias ri="rake install"
 alias rake="bundle exec rake"
 
 # Tmux
-alias ta="tmux a -t"
+alias ta="tmux a -d -t"
 alias tkill="tmux kill-sess -t"
 alias tls="tmux ls"
 
