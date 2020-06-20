@@ -145,6 +145,8 @@ def install_vim
   make_symlink("vim/.vimrc", "~/.vimrc")
   system("mkdir -p ~/.vim/colors/") unless Dir.exist?(File.expand_path("~/.vim/colors/"))
   make_symlink("vim/nord.vim", "~/.vim/colors/nord.vim")
+  system("curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
+  system("mkdir -p ~/.vim/plugins')
   puts "Done!"
 end
 
