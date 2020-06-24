@@ -22,7 +22,8 @@ chatnets = {
 channels = (
   { name = "#/g/sicp"; chatnet = "Rizon"; autojoin = "Yes"; },
   { name = "#/g/punk"; chatnet = "Rizon"; autojoin = "Yes"; },
-  { name = "#pleb"; chatnet = "Rizon"; autojoin = "Yes"; }
+  { name = "#pleb"; chatnet = "Rizon"; autojoin = "Yes"; },
+  { name = "#botto"; chatnet = "Rizon"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -213,7 +214,13 @@ ignores = (
   { mask = "bobobobot"; level = "ALL"; },
   { mask = "man3"; level = "ALL"; },
   { mask = "manlet"; level = "ALL"; },
-  { mask = "Macbot"; level = "ALL"; }
+  { mask = "Macbot"; level = "ALL"; },
+  {
+    level = "ALL";
+    exception = "yes";
+    channels = ( "#pleb", "#botto-test" );
+  },
+  { level = "ALL"; exception = "yes"; channels = ( "#pleb", "#botto" ); }
 );
 completions = {
   gface = { value = "( ≖‿≖)"; auto = "yes"; };
