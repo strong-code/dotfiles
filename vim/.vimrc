@@ -1,10 +1,25 @@
-set number
 syntax on
 colorscheme nord
-set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
-set statusline+=%F
 let g:netrw_banner = 0
 let g:netrw_browse_split = 3
+
+" Global config
+set number
+set hidden
+set cmdheight=2
+set updatetime=300
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+set statusline+=%F
+set number
+
+" COC config
+" Use <c-space> to trigger completion
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><exp> <c-space> coc#refresh()
 
 " Plugins
 call plug#begin('~/.vim/plugins')
