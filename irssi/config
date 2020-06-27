@@ -215,11 +215,6 @@ ignores = (
   { mask = "man3"; level = "ALL"; },
   { mask = "manlet"; level = "ALL"; },
   { mask = "Macbot"; level = "ALL"; },
-  {
-    level = "ALL";
-    exception = "yes";
-    channels = ( "#pleb", "#botto" );
-  },
   { level = "ALL"; exception = "yes"; channels = ( "#pleb", "#botto" ); }
 );
 completions = {
