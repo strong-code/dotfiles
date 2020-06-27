@@ -218,7 +218,7 @@ ignores = (
   {
     level = "ALL";
     exception = "yes";
-    channels = ( "#pleb", "#botto-test" );
+    channels = ( "#pleb", "#botto" );
   },
   { level = "ALL"; exception = "yes"; channels = ( "#pleb", "#botto" ); }
 );
