@@ -25,9 +25,6 @@ export GIT_PS1_SHOWSTASHSTATE=1
 # Shows indicator if branch is in dirty state
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-# Colorize grep always
-export GREP_OPTIONS='--color=auto'
-
 # Android/Java paths
 export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home

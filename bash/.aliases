@@ -22,6 +22,9 @@ alias gstp="git stash pop"
 alias gstc="git stash clear"
 alias gstls="git stash list"
 
+# Grep
+alias grep="grep -n --color"
+
 # Ruby
 alias ri="rake install"
 alias rake="bundle exec rake"
