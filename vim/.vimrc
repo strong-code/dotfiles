@@ -9,7 +9,7 @@ set cmdheight=2
 set updatetime=300
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set statusline+=%F
-set rnu
+set nu rnu
 
 " COC config
 " Use <c-space> to trigger completion
