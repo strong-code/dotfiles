@@ -4,13 +4,12 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 3
 
 " Global config
-set number
 set hidden
 set cmdheight=2
 set updatetime=300
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set statusline+=%F
-set number
+set rnu
 
 " COC config
 " Use <c-space> to trigger completion
