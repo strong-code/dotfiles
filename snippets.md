@@ -18,4 +18,4 @@ For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adgu
 
 ## Mouse
 
-DPI is set to 1000 in G Hub
+DPI is set to 1200 in G Hub
