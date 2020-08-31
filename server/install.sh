@@ -18,8 +18,8 @@ git clone git@github.com:strong-code/dotfiles.git
 
 echo "Linking authorized_keys and crontab..."
 ln -s ~/Documents/code/dotfiles/server/authorized_keys ~/.ssh/authorized_keys
-rm /var/spool/cron/crontab/root
-ln -s ~/Documents/code/dotfiles/server/crontab /var/spool/cron/crontab/root
+# Safer than symlinking, since crontab -e will immediately fuck up symlink
+crontab ~/Documents/code/dotfiles/server/.crontab
 
 echo "Linking irssi dir..."
 ln -s ~/Documents/code/dotfiles/irssi/ ~/.irssi

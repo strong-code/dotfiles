@@ -5,4 +5,4 @@
 */1 * * * * cd /root/Documents/code/dotfiles && git pull 
 
 # Run gas usage crawler every hour
-0 * * * * cd /root/Documents/code/sushi-gas-tracker && node crawler.js
+*/30 * * * * cd /root/Documents/code/sushi-gas-tracker && . ./run.sh >> /var/log/sushi.log 2>&1
