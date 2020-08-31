@@ -15,3 +15,7 @@ Set up named screen, with colors, for SICP mode:
 ## DNS
 
 For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adguard-dns/overview.html#instruction )
+
+## Mouse
+
+DPI is set to 1200 in G Hub
