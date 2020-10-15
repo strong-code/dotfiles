@@ -3,3 +3,6 @@
 
 # Keep dotfiles in sync
 */1 * * * * cd /root/Documents/code/dotfiles && git pull 
+
+# Run gas usage crawler every hour
+*/30 * * * * cd /root/Documents/code/sushi-gas-tracker && . ./run.sh >> /var/log/sushi.log 2>&1

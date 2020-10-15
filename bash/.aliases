@@ -36,7 +36,7 @@ alias tls="tmux ls"
 
 # IRC
 # Log in to server and start irssi in tmux session with named terminal tab
-alias irc="echo -ne \"\033]0;IRC\007\" && ssh -x -t chl 'tmux a -t irc; bash -l'"
+alias irc="echo -ne \"\033]0;IRC\007\" && ssh -x -t chl 'tmux a -t -d irc; bash -l'"
 
 # Misc
 alias ls="ls -FlAhpG"
