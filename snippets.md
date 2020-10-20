@@ -4,14 +4,18 @@ Helpful commands or snippets that would be nice to copy/paste
 
 ## IRC
 
-Set up named screen, with colors:
+List tmux sessions:
 
-    $ screen -T screen-256color -S irc irssi
+    $ tls
 
-Set up named screen, with colors, for SICP mode:
+Attach to existing named tmux irc session locally:
 
-    $ screen -T screen-256color -S sicp irssi --config=~/code/dotfiles/irssi/sicp_config
-    
+    $ tmux a -d -t irc  
+
+Create new tmux irc session locally:
+
+    $ tmux new -s irc 'irssi'
+ 
 ## DNS
 
 For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adguard-dns/overview.html#instruction )
