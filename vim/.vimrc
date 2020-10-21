@@ -11,6 +11,9 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set statusline+=%F
 set nu rnu
 
+" Custom remappings
+noremap <C-d> :term<cr>
+
 " COC config
 " Use <c-space> to trigger completion
 inoremap <silent><expr> <TAB>
