@@ -303,27 +303,7 @@
     "PSAseen": [],
     "hiddenThreads": {
       "4chan.org": {
-        "boards": {
-          "fit": {
-            "17018018": true
-          },
-          "biz": {
-            "4884770": true,
-            "21374000": true
-          },
-          "g": {
-            "76759434": true
-          },
-          "lit": {
-            "11931854": true
-          },
-          "out": {
-            "38571": true
-          },
-          "diy": {
-            "670504": true
-          }
-        },
+        "boards": {},
         "lastChecked": 1602779179131
       },
       "version": 85
@@ -337,33 +317,7 @@
     },
     "lastReadPosts": {
       "4chan.org": {
-        "boards": {
-          "out": {
-            "1857910": 1859030,
-            "1879366": 1880510,
-            "1880636": 1880714,
-            "1882594": 1882738,
-            "1884391": 1889073,
-            "1888897": 1891718
-          },
-          "biz": {
-            "23279065": 23279882
-          },
-          "fit": {
-            "57901850": 57905854,
-            "57902056": 57906671,
-            "57905557": 57907210,
-            "57908803": 57910281
-          },
-          "v": {
-            "528522691": 528561512,
-            "528583279": 528585040,
-            "528584275": 528586882
-          },
-          "g": {
-            "78215180": 78218369
-          }
-        },
+        "boards": {},
         "lastChecked": 1602779179141
       },
       "version": 28569,
@@ -384,49 +338,7 @@
     },
     "watchedThreads": {
       "4chan.org": {
-        "boards": {
-          "v": {
-            "516373269": {
-              "excerpt": "/v/ - Paper Mario Origami King has leaked",
-              "modified": 1594417169,
-              "last": 516393329,
-              "replies": 586,
-              "isDead": true,
-              "isArchived": true,
-              "unread": 587,
-              "quotingYou": 0
-            },
-            "518638210": {
-              "excerpt": "/v/ - Super Hot MCD makes you wait SEVERAL HOURS before you can play i...",
-              "modified": 1595807100,
-              "last": 518722726,
-              "replies": 502,
-              "isDead": true,
-              "isArchived": true,
-              "unread": 503,
-              "quotingYou": 0
-            },
-            "518863454": {
-              "excerpt": "/v/ - What are some fujoshi-core games/series?",
-              "modified": 1595891848,
-              "last": 518866992,
-              "replies": 84,
-              "isDead": true,
-              "quotingYou": 0
-            }
-          },
-          "biz": {
-            "21976036": {
-              "excerpt": "/biz/ - How much money do you spend on clothing each month? Is it wise...",
-              "replies": 169,
-              "isDead": true,
-              "isArchived": true,
-              "unread": 159,
-              "quotingYou": 0,
-              "last": 21987477
-            }
-          }
-        }
+        "boards": {}
       },
       "lastChecked": 1602782271257,
       "lastChecked2": 1602779179190,
