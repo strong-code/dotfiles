@@ -1,6 +1,6 @@
 {
   "timeStamp": 1603239092814,
-  "version": "1.30.4",
+  "version": "1.30.5",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": true,
@@ -82,7 +82,7 @@
     "uiFlavor": "unset",
     "uiStyles": "unset",
     "updateAssetBypassBrowserCache": false,
-    "userResourcesLocation": "https://gist.githubusercontent.com/pixeltris/e78bb8f9d8a7a22665958e339b2d45dd/raw/twitch2.js"
+    "userResourcesLocation": "https://gist.githubusercontent.com/odensc/764900d841cbdd8aa400796001e189f1/raw/ads.js"
   },
   "whitelist": [
   ],
