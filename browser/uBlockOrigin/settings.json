@@ -1,6 +1,6 @@
 {
   "timeStamp": 1603239092814,
-  "version": "1.30.5",
+  "version": "1.30.6",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": true,
@@ -82,7 +82,7 @@
     "uiFlavor": "unset",
     "uiStyles": "unset",
     "updateAssetBypassBrowserCache": false,
-    "userResourcesLocation": "https://gist.githubusercontent.com/odensc/764900d841cbdd8aa400796001e189f1/raw/ads.js"
+    "userResourcesLocation": "https://ttv-ublock.vercel.app/twitch-videoad.js"
   },
   "whitelist": [
   ],
