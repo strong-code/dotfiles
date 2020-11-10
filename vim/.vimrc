@@ -13,6 +13,8 @@ set nu rnu
 
 " Custom remappings
 noremap <C-d> :term<cr>
+nmap <leader>c <Plug>CommentaryLine
+vmap <leader>c <Plug>Commentary
 
 " COC config
 " Use <c-space> to trigger completion
@@ -26,4 +28,5 @@ inoremap <silent><exp> <c-space> coc#refresh()
 " Plugins
 call plug#begin('~/.vim/plugins')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-commentary', {'branch': 'master'}
 call plug#end()
