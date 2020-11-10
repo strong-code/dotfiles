@@ -1,3 +1,9 @@
 [submodule "miscellaneous"]
 	path = miscellaneous
 	url = https://github.com/strong-code/miscellaneous
+[submodule "vim/.vim/pack/plugins/start/commentary"]
+	path = vim/.vim/pack/plugins/start/commentary
+	url = https://tpope.io/vim/commentary.git
+[submodule "vim/.vim/pack/plugins/start/coc.nvim"]
+	path = vim/.vim/pack/plugins/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
