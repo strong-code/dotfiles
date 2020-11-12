@@ -6,4 +6,5 @@ Host chl
   TCPKeepAlive=yes
   ServerAliveInterval 120
   ServerAliveCountMax 30
+  ForwardAgent yes
 
