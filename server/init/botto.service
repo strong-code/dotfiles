@@ -6,8 +6,6 @@ Type=simple
 User=chl
 WorkingDirectory=/home/chl/Documents/code/botto
 Environment=ASDF_DIR=/home/chl/.asdf
-ExecStartPre=/usr/bin/git checkout master
-ExecStartPre=/usr/bin/git pull
 ExecStartPre=/home/chl/.asdf/bin/asdf reshim nodejs 
 ExecStartPre=/bin/bash -c 'PATH=/home/chl/.asdf/shims:$PATH exec npm install --no-optional'
 ExecStart=/bin/bash -c 'PATH=/home/chl/.asdf/shims:$PATH exec node botto.js'
