@@ -1,8 +1,8 @@
 Host chl
-  User root
-  Port 2368
+  User chl
+  Port 22
   ForwardX11 no
-  HostName 107.170.227.56
+  HostName 198.199.103.12 
   TCPKeepAlive=yes
   ServerAliveInterval 120
   ServerAliveCountMax 30
