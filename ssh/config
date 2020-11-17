@@ -8,3 +8,8 @@ Host chl
   ServerAliveCountMax 30
   ForwardAgent yes
 
+Host raspi
+  User pi
+  Port 22
+  HostName 192.168.1.117
+
