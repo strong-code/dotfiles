@@ -4,8 +4,9 @@ Description=Botto service
 [Service]
 Type=simple
 User=chl
+Restart=always
 WorkingDirectory=/home/chl/Documents/code/botto
-Environment=ASDF_DIR=/home/chl/.asdf
-ExecStartPre=/home/chl/.asdf/bin/asdf reshim nodejs 
-ExecStartPre=/bin/bash -c 'PATH=/home/chl/.asdf/shims:$PATH exec npm install --no-optional'
-ExecStart=/bin/bash -c 'PATH=/home/chl/.asdf/shims:$PATH exec node botto.js'
+Environment=ASDF_DATA_DIR=/opt/asdf
+ExecStartPre=/opt/asdf/bin/asdf reshim nodejs 12.0.0
+ExecStartPre=/bin/bash -c 'exec /opt/asdf/shims/npm install --no-optional'
+ExecStart=/bin/bash -c 'exec /opt/asdf/shims/node botto.js'
