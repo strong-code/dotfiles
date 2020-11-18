@@ -29,23 +29,10 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
-# rbenv path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Additional export for rbenv on ubuntu
-if [ "$(uname)" == "Linux" ]; then
-  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-fi
-
 # Add miscellaneous scripts to path
 export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
 
-# NVM stuff
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # asdf loading
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+export ASDF_DATA_DIR=/opt/asdf
+. /opt/asdf/asdf.sh
+. /opt/asdf/completions/asdf.bash
