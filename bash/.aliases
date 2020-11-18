@@ -38,6 +38,9 @@ alias tls="tmux ls"
 # Log in to server and start irssi in tmux session with named terminal tab
 alias irc="echo -ne \"\033]0;IRC\" && ssh -x -t chl 'tmux a -d -t irc; bash -l'"
 
+# systemctl
+alias scl="sudo systemctl"
+
 # Misc
 alias ls="ls -FlAhpG"
 alias c="clear"
