@@ -1,0 +1,12 @@
+[Unit]
+Description=strongco.de service
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/home/deploy/strongcode
+Environment=ASDF_DIR=/home/deploy/.asdf
+Environment=ASDF_NODEJS_VERSION=12.0.0
+ExecStartPre=/home/deploy/.asdf/bin/asdf reshim nodejs 
+ExecStartPre=/bin/bash -c 'PATH=/home/deploy/.asdf/shims:$PATH exec npm install --no-optional'
+ExecStart=/bin/bash -c 'PATH=/home/deploy/.asdf/shims:$PATH exec node index.js production'

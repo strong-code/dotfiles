@@ -10,7 +10,7 @@ server {
 
         listen 80;
 
-        root /var/www/strongcode-client;
+        root /home/deploy/strongcode-client/dist;
         index index.html index.htm;
         error_log /var/log/nginx/error.log debug;
 
