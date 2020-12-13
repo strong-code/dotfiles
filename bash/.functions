@@ -87,3 +87,12 @@ soxprox () {
     echo "Error opening proxy on port 8080"
   fi
 }
+
+# Connect to IRC tmux session on VPS
+irc () {
+  if [ "$(hostname)" == "chl-server" ]; then
+    tmux a -d -t irc
+  else 
+    echo -ne "\033]0;IRC" && ssh -x -t chl 'tmux a -d -t irc; bash -l'
+  fi
+}
