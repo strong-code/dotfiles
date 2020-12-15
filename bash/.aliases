@@ -37,6 +37,9 @@ alias tls="tmux ls"
 # systemctl
 alias scl="sudo systemctl"
 
+# Docker
+alias docker="sudo docker"
+
 # Misc
 alias ls="ls -FlAhpG"
 alias c="clear"
