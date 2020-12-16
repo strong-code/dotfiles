@@ -1,0 +1,16 @@
+server {
+        # home IP
+        allow 136.24.33.164;
+        deny all;
+
+        listen 80;
+        root /usr/share/nginx/www;
+        index index.html index.htm;
+
+        server_name health.strongco.de;
+
+        location / {
+          proxy_pass http://localhost:3005/;
+          proxy_set_header Authorization "";
+        }
+}
