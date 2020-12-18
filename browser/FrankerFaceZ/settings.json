@@ -3,6 +3,7 @@
   "type": "full",
   "values": {
     "p:0:chat.lines.borders": 1,
+    "p:0:layout.portrait-min-chat": false,
     "p:0:chat.scroller.freeze": 1,
     "p:0:player.volume-scroll": true,
     "p:0:chat.badges.hidden": {
@@ -15,7 +16,7 @@
       "vga-champ-2017": true,
       "warcraft": true,
       "anonymous-cheerer": true,
-      "admin": true,
+      "admin": false,
       "twitchbot": true,
       "bits-leader": true,
       "samusoffer_beta": true,
@@ -301,6 +302,7 @@
     "p:0:channel.round-avatars": true,
     "p:0:chat.lines.alternate": true,
     "p:0:chat.bits.show-pinned": false,
+    "p:0:player.volume-scroll-steps": 0.02,
     "p:0:chat.bits.show-rewards": false,
     "p:0:layout.side-nav.show-rec-channels": 0,
     "p:0:player.volume-always-shown": true,
@@ -310,7 +312,7 @@
     "cfg-collapsed": [],
     "p:0:chat.points.show-callouts": false,
     "p:0:layout.side-nav.hide-offline": true,
-    "p:0:chat.lines.padding": false,
+    "p:0:chat.lines.padding": true,
     "p:0:theme.dark": true,
     "p:0:chat.filtering.remove-deleted": 0,
     "emote-menu.collapsed": [
@@ -329,7 +331,7 @@
     "p:0:player.button.pip": false,
     "p:0:directory.hide-recommended": true,
     "p:0:channel.auto-skip-trailer": true,
-    "p:0:layout.portrait-min-chat": false,
-    "p:0:player.volume-scroll-steps": 0.02
+    "p:0:chat.points.allow-highlight": false,
+    "p:0:chat.hide-community-highlights": false
   }
 }
