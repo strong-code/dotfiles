@@ -4,4 +4,4 @@ Description=node_exporter service
 [Service]
 Type=simple
 Restart=always
-ExecStart=/etc/prometheus/node_exporter-1.0.1.linux-amd64/node_exporter --web.listen-address=localhost:9100
+ExecStart=/etc/prometheus/node_exporter-1.0.1.linux-amd64/node_exporter --web.listen-address=172.17.0.1:9100
