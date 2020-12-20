@@ -73,6 +73,11 @@ terminal:
         - '#c678dd'
         - '#56b6c2'
         - '#dcdfe4'
+  searchOptions: {}
+  warnOnMultilinePaste: false
+  hideTabIndex: true
+  font: Mononoki
+  fontSize: 12
 hotkeys:
   shell: {}
   profile: {}
