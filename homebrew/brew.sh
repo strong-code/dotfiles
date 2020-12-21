@@ -14,7 +14,7 @@ brew upgrade --all
 
 # Install basic apps
 echo Done! Installing user applications...
-declare -a apps=("google-chrome" "spotify" "lastfm" "qbitorrent" "vlc" "docker")
+declare -a apps=("firefox" "spotify" "lastfm" "qbitorrent" "vlc" "docker")
 for a in ${apps[*]}
 do
   brew cask install --appdir="/Applications" $a
