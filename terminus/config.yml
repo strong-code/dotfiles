@@ -77,7 +77,7 @@ terminal:
   warnOnMultilinePaste: false
   hideTabIndex: true
   font: Mononoki
-  fontSize: 12
+  fontSize: 13
 hotkeys:
   shell: {}
   profile: {}
