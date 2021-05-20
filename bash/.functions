@@ -96,3 +96,15 @@ irc () {
     echo -ne "\033]0;IRC" && ssh -x -t chl 'tmux a -d -t irc; bash -l'
   fi
 }
+
+# Quickly serve current or supplied dir
+serve () {
+  if [ -z "$1" ]; then
+    DIR="."
+  else
+    DIR=$1
+  fi
+  echo "Serving $(fp $DIR)"
+  ruby -run -e httpd $DIR -p 3001
+}
+    
