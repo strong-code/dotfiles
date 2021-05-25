@@ -1,4 +1,0 @@
-# This is a secrets file for all services
-
-# Strongco.de API
-export STRONGCODE_API_KEY=1234567890abcdefg
