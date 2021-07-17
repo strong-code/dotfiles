@@ -1,0 +1,96 @@
+terminal:
+  colorScheme:
+    name: OneHalfDark
+    foreground: '#dcdfe4'
+    background: 'rgba(38, 50, 56, 1)'
+    cursor: '#a3b3cc'
+    colors:
+      - '#282c34'
+      - '#e06c75'
+      - '#98c379'
+      - '#e5c07b'
+      - '#61afef'
+      - '#c678dd'
+      - '#56b6c2'
+      - '#dcdfe4'
+      - '#282c34'
+      - '#e06c75'
+      - '#98c379'
+      - '#e5c07b'
+      - '#61afef'
+      - '#c678dd'
+      - '#56b6c2'
+      - '#dcdfe4'
+  ligatures: true
+  background: colorScheme
+  environment: {}
+  profile: default-(wsl-/-default-distro)
+  bell: 'off'
+  altIsMeta: true
+  copyOnSelect: true
+  cursor: beam
+  customColorSchemes:
+    - name: Material
+      foreground: '#eceff1'
+      background: 'rgba(38, 50, 56, 1)'
+      selection: null
+      cursor: '#FFCC00'
+      colors:
+        - '#000000'
+        - '#D62341'
+        - '#9ECE58'
+        - '#FAED70'
+        - '#396FE2'
+        - '#BB80B3'
+        - '#2DDAFD'
+        - '#d0d0d0'
+        - 'rgba(255, 255, 255, 0.2)'
+        - '#FF5370'
+        - '#C3E88D'
+        - '#FFCB6B'
+        - '#82AAFF'
+        - '#C792EA'
+        - '#89DDFF'
+        - '#ffffff'
+    - name: OneHalfDark
+      foreground: '#dcdfe4'
+      background: 'rgba(38, 50, 56, 1)'
+      cursor: '#a3b3cc'
+      colors:
+        - '#282c34'
+        - '#e06c75'
+        - '#98c379'
+        - '#e5c07b'
+        - '#61afef'
+        - '#c678dd'
+        - '#56b6c2'
+        - '#dcdfe4'
+        - '#282c34'
+        - '#e06c75'
+        - '#98c379'
+        - '#e5c07b'
+        - '#61afef'
+        - '#c678dd'
+        - '#56b6c2'
+        - '#dcdfe4'
+  searchOptions: {}
+  warnOnMultilinePaste: false
+  hideTabIndex: true
+  font: Mononoki
+  fontSize: 13
+hotkeys:
+  shell: {}
+  profile: {}
+  toggle-window: []
+serial: {}
+ssh: {}
+appearance:
+  theme: Compact
+  vibrancy: true
+  vibrancyType: fluent
+  frame: thin
+enableAnalytics: false
+enableWelcomeTab: false
+pluginBlacklist:
+  - ssh
+  - serial
