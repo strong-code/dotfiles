@@ -1,0 +1,12 @@
+server {
+
+        listen 80;
+
+        error_log /var/log/nginx/error.log debug;
+
+        server_name botto.strongco.de;
+
+        location / {
+          proxy_pass http://localhost:8181;
+        }
+}
