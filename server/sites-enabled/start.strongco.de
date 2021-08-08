@@ -3,9 +3,9 @@ server {
         auth_basic_user_file /etc/apache2/.htpasswd;
 
         # home IP
-        allow 136.24.33.164/24;
+        allow 136.24.33.164;
         # parents house
-        allow 69.181.132.127;
+        allow 69.181.151.131;
         deny all;
 
         listen 80;
