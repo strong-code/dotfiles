@@ -33,10 +33,10 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
 
 # asdf loading
-if [ "$(uname)" == "Darwin" ]; then
-  export ASDF_DATA_DIR=~/.asdf
-else
+if [ "$(hostname)" == "chl-server" ]; then
   export ASDF_DATA_DIR=/opt/asdf
+else
+  export ASDF_DATA_DIR=~/.asdf
 fi
 . ${ASDF_DATA_DIR}/asdf.sh
 . ${ASDF_DATA_DIR}/completions/asdf.bash
