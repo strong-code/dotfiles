@@ -15,6 +15,8 @@ Attach to existing named tmux irc session locally:
 Create new tmux irc session locally:
 
     $ tmux new -s irc 'irssi'
+
+Scrolling in Terminal.app with irssi in tmux `Option+P`/`Option+N` or `fn+shift+up`/`fn+shift+down` 
  
 ## DNS
 

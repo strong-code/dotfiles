@@ -209,7 +209,7 @@ settings = {
 logs = { };
 ignores = (
   { mask = "list"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; },
+  { level = "JOINS PARTS QUITS NO_ACT"; },
   { mask = "kekbot"; level = "ALL"; },
   { mask = "bobobobot"; level = "ALL"; },
   { mask = "man3"; level = "ALL"; },
