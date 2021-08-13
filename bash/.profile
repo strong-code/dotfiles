@@ -29,8 +29,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
-# Add miscellaneous scripts to path
-export PATH=$PATH:$(code && echo $(pwd))/miscellaneous
+# Add homebrew /bin path before system /bin
+export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # asdf loading
 if [ "$(hostname)" == "chl-server" ]; then
