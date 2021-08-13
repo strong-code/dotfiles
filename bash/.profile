@@ -30,7 +30,7 @@ export ANDROID_HOME=/Users/chl/Downloads/android-sdk-macosx
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
 # Add homebrew /bin path before system /bin on MacOS
-if [ "$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 fi
 
