@@ -10,6 +10,7 @@ set updatetime=300
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set statusline+=%F
 set nu rnu
+set backspace=indent,eol,start
 
 " Custom remappings
 noremap <C-d> :term<cr>
@@ -29,4 +30,5 @@ inoremap <silent><exp> <c-space> coc#refresh()
 call plug#begin('~/.vim/plugins')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary', {'branch': 'master'}
+Plug 'arcticicestudio/nord-vim', {'branch': 'master'}
 call plug#end()
