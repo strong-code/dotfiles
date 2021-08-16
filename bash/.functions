@@ -56,7 +56,7 @@ myip () {
 
 # Get process for given port
 port () {
-  lsof -i:$1
+  sudo lsof -i :$1
 }
 
 # git merge master into current branch
