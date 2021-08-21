@@ -41,7 +41,11 @@ alias scl="sudo systemctl"
 alias docker="sudo docker"
 
 # Misc
-alias ls="ls -FlAhpG"
+if [ -f /usr/bin/exa ]; then
+  alias ls="exa -F -l -a"
+else
+  alias ls="ls -FlAhpG"
+fi
 alias c="clear"
 alias reload="source ~/.bash_profile"
 alias htop="htop --tree"
