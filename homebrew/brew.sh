@@ -22,7 +22,7 @@ done
 
 # Install development apps
 echo Done! Installing development applications...
-declare -a apps=("postgresql" "git" "jq" "rbenv" "vim")
+declare -a apps=("postgresql" "git" "jq" "rbenv" "vim" "exa")
 for a in ${apps[*]}
 do
   brew install $a
