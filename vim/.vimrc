@@ -13,6 +13,10 @@ set nu rnu
 set backspace=indent,eol,start
 set hlsearch
 
+" Prevent WSL from entering us into replace mode
+" https://superuser.com/a/1525060
+set t_u7=
+
 " Custom remappings
 noremap <C-d> :term<cr>
 nmap <leader>c <Plug>CommentaryLine
