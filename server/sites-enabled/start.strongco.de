@@ -1,4 +1,6 @@
 server {
+        satisfy any;
+
         auth_basic "Start";
         auth_basic_user_file /etc/apache2/.htpasswd;
 
