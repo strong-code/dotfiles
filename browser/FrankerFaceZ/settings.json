@@ -5,6 +5,7 @@
     "p:0:layout.side-nav.show": 1,
     "p:0:chat.points.allow-highlight": false,
     "p:0:chat.lines.borders": 1,
+    "p:0:layout.portrait-min-chat": false,
     "p:0:chat.scroller.freeze": 1,
     "p:0:player.volume-scroll": true,
     "p:0:chat.badges.hidden": {
@@ -35,14 +36,16 @@
       "m-owl": true,
       "glitchcon2020": true,
       "predictions": true,
-      "ambassador": true
+      "ambassador": true,
+      "user-anniversary": true,
+      "m-addon": true,
+      "m-other": true
     },
     "p:0:chat.banners.hype-train": false,
     "p:0:chat.bits.animated": false,
     "p:0:chat.hide-community-highlights": false,
     "p:0:channel.auto-click-chat": true,
     "p:0:directory.hide-vodcasts": true,
-    "p:0:layout.portrait-min-chat": false,
     "p:0:channel.hide-not-live-bar": true,
     "p:0:directory.hide-promoted": true,
     "p:0:channel.show-celebrations": false,
@@ -63,7 +66,6 @@
     "p:0:chat.rich.all-links": true,
     "p:0:directory.hide-latest-videos": true,
     "p:0:chat.bits.show": false,
-    "p:0:chat.points.show-button": true,
     "p:0:player.mute-click": true,
     "cfg-seen": [
       "i18n.debug.transform",
@@ -368,10 +370,12 @@
     "p:0:chat.bits.show-pinned": false,
     "p:0:player.volume-scroll-steps": 0.02,
     "p:0:chat.bits.show-rewards": false,
+    "p:0:layout.portrait": false,
     "p:0:layout.side-nav.show-rec-channels": 0,
     "p:0:player.volume-always-shown": true,
     "p:0:chat.scroller.hover-delay": 5000,
     "p:0:player.compressor.enable": true,
+    "p:0:chat.points.show-button": true,
     "cfg-collapsed": [],
     "p:0:chat.points.show-callouts": false,
     "p:0:clips.layout.big": true,
@@ -397,7 +401,6 @@
     "p:0:layout.swap-sidebars": false,
     "p:0:player.button.pip": false,
     "p:0:directory.hide-recommended": true,
-    "p:0:channel.auto-skip-trailer": true,
-    "p:0:layout.portrait": false
+    "p:0:channel.auto-skip-trailer": true
   }
 }
