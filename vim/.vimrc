@@ -24,10 +24,8 @@ nmap <leader>c <Plug>CommentaryLine
 vmap <leader>c <Plug>Commentary
 nnoremap <leader>s :Tex<cr> :tabm 0<cr>
 
-" Special handling of <esc> to turn off search highlight
-" https://stackoverflow.com/a/20458579
-nnoremap <silent><esc> :noh<cr>
-nnoremap <esc>[ <esc>[
+" <leader><space> to turn off search highlighting
+nnoremap <leader><space> :noh<cr>
 
 " COC config
 " Use <c-space> to trigger completion

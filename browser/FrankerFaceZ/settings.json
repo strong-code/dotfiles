@@ -36,7 +36,10 @@
       "m-owl": true,
       "glitchcon2020": true,
       "predictions": true,
-      "ambassador": true
+      "ambassador": true,
+      "user-anniversary": true,
+      "m-addon": true,
+      "m-other": true
     },
     "p:0:chat.banners.hype-train": false,
     "p:0:chat.bits.animated": false,
@@ -48,19 +51,22 @@
     "p:0:channel.show-celebrations": false,
     "p:0:layout.side-nav.rerun-style": 0,
     "p:0:chat.points.auto-rewards": true,
-    "p:0:player.hide-squad-banner": true,
+    "p:0:player.ext-interaction": false,
     "addons.enabled": [
-      "7tv-emotes"
+      "7tv-emotes",
+      "ffzap-core",
+      "ffzap-bttv"
     ],
+    "p:0:layout.side-nav.show-rec-friends": false,
     "p:0:chat.points.show-rewards": false,
     "p:0:metadata.viewers": true,
     "p:0:chat.banners.polls": true,
+    "p:0:layout.portrait-invert": false,
     "p:0:player.compressor.default": true,
     "p:0:chat.rich.all-links": true,
     "p:0:directory.hide-latest-videos": true,
     "p:0:chat.bits.show": false,
     "p:0:player.mute-click": true,
-    "p:0:layout.portrait-invert": false,
     "cfg-seen": [
       "i18n.debug.transform",
       "socket.use-cluster",
@@ -337,13 +343,26 @@
       "chat.filtering.debug",
       "chat.bits.cheer-notice",
       "clear",
-      "provider"
+      "provider",
+      "ffzap.betterttv.arbitrary_emoticons",
+      "ffzap.betterttv.channel_emoticons",
+      "ffzap.betterttv.global_emoticons",
+      "ffzap.betterttv.pro_emoticons",
+      "ffzap.core.message_deletion",
+      "ffzap.core.remove_spaces",
+      "ffzap.core.enable_highlight_sound",
+      "ffzap.core.highlight_sound",
+      "ffzap.core.highlight_sound_volume",
+      "ffzap.core.highlight_sound_prevent_own_channel",
+      "ffzap.core.highlight_sound_types"
     ],
     "p:0:chat.community-chest.show": false,
+    "p:0:player.ext-hide": 2,
     "p:0:layout.display-bits-button": false,
     "p:0:chat.subs.gift-banner": false,
     "p:0:chat.lines.emote-alignment": 0,
     "p:0:layout.minimal-navigation": true,
+    "p:0:chat.lines.padding": true,
     "p:0:chat.filtering.highlight-mentions": true,
     "p:0:channel.round-avatars": true,
     "p:0:player.vod.autoplay": false,
@@ -360,9 +379,10 @@
     "cfg-collapsed": [],
     "p:0:chat.points.show-callouts": false,
     "p:0:clips.layout.big": true,
-    "p:0:layout.side-nav.show-rec-friends": false,
+    "p:0:player.hide-squad-banner": true,
     "p:0:layout.side-nav.hide-offline": true,
-    "p:0:chat.lines.padding": true,
+    "p:0:chat.filtering.color-mentions": true,
+    "p:0:chat.subs.compact": true,
     "p:0:theme.dark": true,
     "p:0:chat.filtering.remove-deleted": 0,
     "emote-menu.collapsed": [
@@ -379,10 +399,8 @@
     "p:0:player.hide-event-bar": true,
     "p:0:chat.replies.style": 1,
     "p:0:layout.swap-sidebars": false,
-    "p:0:chat.filtering.color-mentions": true,
     "p:0:player.button.pip": false,
     "p:0:directory.hide-recommended": true,
-    "p:0:channel.auto-skip-trailer": true,
-    "p:0:chat.subs.compact": true
+    "p:0:channel.auto-skip-trailer": true
   }
 }
