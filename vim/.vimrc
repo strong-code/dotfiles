@@ -2,6 +2,7 @@ syntax on
 colorscheme nord
 let g:netrw_banner = 0
 let g:netrw_browse_split = 3
+let g:netrw_liststyle = 3
 
 " Global config
 set hidden
@@ -21,6 +22,7 @@ set t_u7=
 noremap <C-d> :term<cr>
 nmap <leader>c <Plug>CommentaryLine
 vmap <leader>c <Plug>Commentary
+nnoremap <leader>s :Tex<cr> :tabm 0<cr>
 
 " Special handling of <esc> to turn off search highlight
 " https://stackoverflow.com/a/20458579
