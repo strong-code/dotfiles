@@ -3,9 +3,7 @@
   "type": "full",
   "values": {
     "p:0:layout.side-nav.show": 1,
-    "p:0:chat.points.allow-highlight": false,
     "p:0:chat.lines.borders": 1,
-    "p:0:layout.portrait-min-chat": false,
     "p:0:chat.scroller.freeze": 1,
     "p:0:player.volume-scroll": true,
     "p:0:chat.badges.hidden": {
@@ -61,12 +59,12 @@
     "p:0:chat.points.show-rewards": false,
     "p:0:metadata.viewers": true,
     "p:0:chat.banners.polls": true,
-    "p:0:layout.portrait-invert": false,
     "p:0:player.compressor.default": true,
     "p:0:chat.rich.all-links": true,
     "p:0:directory.hide-latest-videos": true,
     "p:0:chat.bits.show": false,
     "p:0:player.mute-click": true,
+    "p:0:layout.portrait-invert": false,
     "cfg-seen": [
       "i18n.debug.transform",
       "socket.use-cluster",
@@ -354,9 +352,9 @@
       "ffzap.core.highlight_sound",
       "ffzap.core.highlight_sound_volume",
       "ffzap.core.highlight_sound_prevent_own_channel",
-      "ffzap.core.highlight_sound_types"
+      "ffzap.core.highlight_sound_types",
+      "chat.banners.drops"
     ],
-    "p:0:chat.community-chest.show": false,
     "p:0:player.ext-hide": 2,
     "p:0:layout.display-bits-button": false,
     "p:0:chat.subs.gift-banner": false,
@@ -372,8 +370,10 @@
     "p:0:chat.bits.show-rewards": false,
     "p:0:layout.portrait": false,
     "p:0:layout.side-nav.show-rec-channels": 0,
+    "p:0:chat.community-chest.show": false,
     "p:0:player.volume-always-shown": true,
     "p:0:chat.scroller.hover-delay": 5000,
+    "p:0:chat.points.allow-highlight": false,
     "p:0:player.compressor.enable": true,
     "p:0:chat.points.show-button": true,
     "cfg-collapsed": [],
@@ -395,12 +395,15 @@
     "client-id": "7896b2f2-8b3a-4d6c-9e34-e0a023811da4",
     "p:0:player.home.autoplay": false,
     "p:0:chat.filtering.deleted-style": 0,
+    "p:0:layout.portrait-min-chat": false,
     "exp-lock": 1605908825138,
     "p:0:player.hide-event-bar": true,
     "p:0:chat.replies.style": 1,
     "p:0:layout.swap-sidebars": false,
     "p:0:player.button.pip": false,
     "p:0:directory.hide-recommended": true,
-    "p:0:channel.auto-skip-trailer": true
+    "p:0:channel.auto-skip-trailer": true,
+    "p:0:chat.filtering.display-deleted": "DETAILED",
+    "p:0:chat.filtering.ignore-clear": true
   }
 }
