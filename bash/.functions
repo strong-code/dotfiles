@@ -45,7 +45,7 @@ gch () {
 
 # Get public-facing IP
 myip () {
-  PUB_IP=$(curl -s ipecho.net/plain)
+  PUB_IP=$(curl -s http://strongco.de/ip)
 
   if [ "$(uname)" == "Linux" ]; then
     echo "$PUB_IP"
