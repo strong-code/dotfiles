@@ -1,5 +1,4 @@
 server {
-    listen 80;
     server_name strongco.de www.strongco.de;
     client_max_body_size 20M;
     set $cors "";
@@ -23,5 +22,32 @@ server {
       proxy_set_header X-Scheme $scheme;
       proxy_set_header X-Forwarded-For $remote_addr;
     }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/strongco.de/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/strongco.de/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
 }
 
+server {
+    if ($host = www.strongco.de) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = strongco.de) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name strongco.de www.strongco.de;
+    return 404; # managed by Certbot
+
+
+
+
+}
