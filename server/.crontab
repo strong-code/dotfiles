@@ -1,8 +1,5 @@
-# Refresh startpage repo
-*/1 * * * * cd /var/www/startpage && git pull
-
 # Keep dotfiles in sync
 */1 * * * * cd /root/Documents/code/dotfiles && git pull 
 
-# Run gas usage crawler every hour
-*/30 * * * * cd /root/Documents/code/sushi-gas-tracker && . ./run.sh >> /var/log/sushi.log 2>&1
+# Run certbot renewal daily at 3, since it only fires if certs are close to expiry
+0 3 */1 * * /usr/bing/certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start" --quiet --no-self-upgrade 
