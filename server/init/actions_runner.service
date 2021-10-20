@@ -1,0 +1,7 @@
+[Unit]
+Description=actions_runner service
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/chl/Documents/code/actions-runner/run.sh
