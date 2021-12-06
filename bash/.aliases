@@ -49,3 +49,8 @@ fi
 alias c="clear"
 alias reload="source ~/.bash_profile"
 alias htop="htop --tree"
+
+# Use Git style diff and colorize 
+if (( $(echo "$(diff -v | head -1 | cut -f 4 -d' ') > 3.4" | bc -l) )); then
+  alias diff="diff --color -u"
+fi
