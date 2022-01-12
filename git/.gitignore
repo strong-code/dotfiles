@@ -56,7 +56,6 @@ Session.vim
 # Ruby
 # ----------------------------------------------------------------------------------------------
 # Ignore built gems
-*.gem
 /.bundle/
 /.yardoc
 /Gemfile.lock

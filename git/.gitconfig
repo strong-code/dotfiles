@@ -2,4 +2,4 @@
 	name = strong-code
 	email = colin@strongco.de
 [core]
-	excludesfile = /home/chl/.gitignore
+	excludesfile = ~/.gitignore
