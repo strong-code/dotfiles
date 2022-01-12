@@ -31,10 +31,12 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 
 # Add homebrew /bin path before system /bin on MacOS
 if [ "$(uname)" == "Darwin" ]; then
-  export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
+  export PATH=/opt/homebrew/bin:/opts/homebrew/sbin:$PATH
 fi
 
 # asdf loading
+# Always install from git, not homebrew
+# http://asdf-vm.com/guide/getting-started.html#_2-download-asdf
 if [ "$(hostname)" == "chl-server" ]; then
   export ASDF_DATA_DIR=/opt/asdf
 else
@@ -42,3 +44,4 @@ else
 fi
 . ${ASDF_DATA_DIR}/asdf.sh
 . ${ASDF_DATA_DIR}/completions/asdf.bash
+
