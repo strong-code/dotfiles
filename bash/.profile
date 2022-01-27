@@ -45,3 +45,5 @@ fi
 . ${ASDF_DATA_DIR}/asdf.sh
 . ${ASDF_DATA_DIR}/completions/asdf.bash
 
+# Set tty for gpg signing 
+export GPG_TTY=$(tty)
