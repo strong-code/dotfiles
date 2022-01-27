@@ -1,5 +1,8 @@
 [user]
 	name = strong-code
 	email = colin@strongco.de
+	signingkey = 7268001529EE8877
 [core]
 	excludesfile = ~/.gitignore
+[commit]
+	gpgSign = true
