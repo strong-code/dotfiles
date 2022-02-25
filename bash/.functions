@@ -43,6 +43,11 @@ gch () {
   git checkout "$@"
 }
 
+# Get current branch name
+curr_branch () {
+  git symbolic-ref --short HEAD
+}
+
 # Get public-facing IP
 myip () {
   PUB_IP=$(curl -s https://strongco.de/ip)
