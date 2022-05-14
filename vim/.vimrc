@@ -24,6 +24,10 @@ nmap <leader>c <Plug>CommentaryLine
 vmap <leader>c <Plug>Commentary
 nnoremap <leader>s :Tex<cr> :tabm 0<cr>
 
+" Clap remappings
+" \f to open file finder
+noremap <leader>f :Clap files<cr>
+
 " <leader><space> to turn off search highlighting
 nnoremap <leader><space> :noh<cr>
 
