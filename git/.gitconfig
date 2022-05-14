@@ -1,7 +1,11 @@
-[user]
+[user] # work computer
 	name = strong-code
 	email = colin@strongco.de
 	signingkey = 7268001529EE8877
+[user] # desktop computer
+    name = strong-code
+    email = colin@strongco.de
+    signingkey = E0C187121C1D931633DD93102FE311608369E3F1
 [core]
 	excludesfile = ~/.gitignore
 [commit]
