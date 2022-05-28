@@ -10,3 +10,7 @@
 	excludesfile = ~/.gitignore
 [commit]
 	gpgSign = true
+[safe]
+	directory = /home/chl/Documents/code/actions-runner/_work/strongcode-client/strongcode-client
+	directory = /home/deploy/strongcode-client
+	directory = /home/deploy/strongcode
