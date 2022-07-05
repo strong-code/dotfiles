@@ -17,6 +17,11 @@ fp () {
   esac
 }
 
+# Colorized git diffs
+gd () {
+  git diff --color $1 | ~/Documents/code/dotfiles/git/diff-so-fancy
+}
+
 # Push to current branch with remote origin
 gpc () {
   branch=$(git rev-parse --abbrev-ref HEAD)
