@@ -44,6 +44,6 @@ inoremap <silent><exp> <c-space> coc#refresh()
 call plug#begin('~/.vim/plugins')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary', {'branch': 'master'}
-Plug 'arcticicestudio/nord-vim', {'branch': 'master'}
+Plug 'arcticicestudio/nord-vim', {'branch': 'main'}
 Plug 'liuchengxu/vim-clap', {'do': ':Clap install-binary!'}
 call plug#end()
