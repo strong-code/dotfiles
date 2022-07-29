@@ -45,7 +45,12 @@ gsts () {
 }
 
 gch () {
-  git checkout "$@"
+  if [ "$@" == "master" ]; then
+    # Sometimes 'master' is renamed to 'main'
+    git checkout "$@" || echo "No master branch found! Trying 'gch main'" && git checkout main
+  else
+    git checkout "$@"
+  fi
 }
 
 # Get current branch name
