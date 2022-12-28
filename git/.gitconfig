@@ -6,6 +6,7 @@
     name = strong-code
     email = colin@strongco.de
     signingkey = E0C187121C1D931633DD93102FE311608369E3F1
+	signingKey = 390621135F04A599
 [core]
 	excludesfile = ~/.gitignore
 [commit]

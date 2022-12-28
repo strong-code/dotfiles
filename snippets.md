@@ -25,3 +25,9 @@ For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adgu
 ## Mouse
 
 DPI is set to 1200 in G Hub
+
+## GPG Signing Keys
+
+On a new computer, [generate a key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key). 
+
+Add it to GitHub, then add key ID to ~/.gitconfig 
