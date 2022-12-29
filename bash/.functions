@@ -122,4 +122,8 @@ serve () {
   echo "Serving $(fp $DIR)"
   ruby -run -e httpd $DIR -p 3001
 }
-    
+
+# Run ssh-agent before ssh on desktop
+chl () {
+  eval `ssh-agent` && ssh-add && ssh chl
+}
