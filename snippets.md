@@ -24,7 +24,7 @@ For DoH, currently using `default` [AdGuard servers](https://adguard.com/en/adgu
 
 ## Mouse
 
-DPI is set to 1200 (G900) or 1500 (G604) in G Hub/Onboard Memory Manager
+DPI is set to 1200 (G900) or 1600 (G604) in G Hub/Onboard Memory Manager
 
 ## GPG Signing Keys
 
