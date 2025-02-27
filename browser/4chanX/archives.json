@@ -60,8 +60,8 @@
                   "search": ["cm", "co", "ic", "sci", "tg", "y"]
 }, {
   "uid": 25,
-    "name": "arch.b4k.co",
-      "domain": "arch.b4k.co",
+    "name": "arch.b4k.dev",
+      "domain": "arch.b4k.dev",
         "http": true,
           "https": true,
             "software": "foolfuuka",
