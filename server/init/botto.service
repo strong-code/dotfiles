@@ -7,7 +7,7 @@ User=chl
 Restart=always
 WorkingDirectory=/home/chl/Documents/code/botto
 Environment=ASDF_DATA_DIR=/opt/asdf
-ExecStartPre=/opt/asdf/bin/asdf reshim nodejs 12.0.0
-ExecStartPre=/bin/bash -c 'exec /opt/asdf/shims/npm install --no-optional --audit false --fund false'
-ExecStartPre=/bin/bash -c 'exec /opt/asdf/shims/node web/server.js &'
-ExecStart=/bin/bash -c 'exec /opt/asdf/shims/node botto.js'
+ExecStartPre=/opt/asdf/bin/asdf reshim nodejs 14.7.2
+ExecStartPre=/bin/bash -c '. /opt/asdf/asdf.sh && npm install --no-optional --audit false --fund false'
+ExecStartPre=/bin/bash -c '/opt/asdf/bin/asdf exec node web/server.js &'
+ExecStart=/bin/bash -c '/opt/asdf/bin/asdf exec node botto.js'
