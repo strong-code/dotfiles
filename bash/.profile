@@ -39,10 +39,10 @@ fi
 # http://asdf-vm.com/guide/getting-started.html#_2-download-asdf
 if [ "$(hostname)" == "chl-server" ]; then
   export ASDF_DATA_DIR=/opt/asdf
+  export PATH="$ASDF_DATA_DIR/bin:$ASDF_DATA_DIR/shims:$PATH"
 else
   export ASDF_DATA_DIR=~/.asdf
 fi
-. ${ASDF_DATA_DIR}/asdf.sh
 . ${ASDF_DATA_DIR}/completions/asdf.bash
 
 # Set tty for gpg signing 
