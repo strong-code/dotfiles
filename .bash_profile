@@ -15,7 +15,7 @@ fi
 . "$BASH_SRC_PATH"/.aliases
 . "$BASH_SRC_PATH"/.profile
 . "$BASH_SRC_PATH"/.functions
-. ~/.git-prompt.sh
+. ~/Documents/code/dotfiles/git/.git-prompt.sh
 
 # Show special SSH prompt
 if [ -n "$SSH_CONNECTION" ]; then
