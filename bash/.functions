@@ -127,3 +127,8 @@ serve () {
 chl () {
   eval `ssh-agent` && ssh-add && ssh chl
 }
+
+# Run ssh-agent before ssh on desktop
+homelab () {
+  eval `ssh-agent` && ssh-add && ssh homelab
+}
