@@ -47,3 +47,6 @@ fi
 
 # Set tty for gpg signing 
 export GPG_TTY=$(tty)
+
+# Antigravity path
+export PATH="/home/chl/.local/bin:$PATH"
